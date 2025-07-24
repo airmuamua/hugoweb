@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Skye</title>
+        <link>https://airmuamua.github.io/hugoweb/post/</link>
+        <description>Recent content in Posts on Skye</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>空气炸锅中-Skye</copyright>
+        <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://airmuamua.github.io/hugoweb/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【C/C&#43;&#43;】C/C&#43;&#43;语言文档</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b005/</link>
+        <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b005/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b005/c.jpg" alt="Featured image of post 【C/C&#43;&#43;】C/C&#43;&#43;语言文档" /&gt;&lt;h2 id=&#34;cc语言文档&#34;&gt;C/C++语言文档
+&lt;/h2&gt;&lt;h2 id=&#34;cc语言参考&#34;&gt;C/C++语言参考
+&lt;/h2&gt;&lt;h3 id=&#34;内置类型&#34;&gt;内置类型
+&lt;/h3&gt;&lt;h3 id=&#34;数据类型&#34;&gt;数据类型
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;strong&gt;类型名称&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;字节&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;其他名称&lt;/th&gt;
+          &lt;th&gt;值的范围&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;int&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;signed&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;-2,147,483,648 到 2,147,483,647&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned int&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;unsigned&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0 到 4,294,967,295&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;__int8&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;char&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;-128 到 127&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned __int8&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;unsigned char&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0 到 255&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;__int16&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;.- .&lt;/td&gt;
+          &lt;td&gt;-32,768 到 32,767&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned __int16&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;%&amp;gt;&lt;/td&gt;
+          &lt;td&gt;0 到 65,535&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;__int32&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;.- .&lt;/td&gt;
+          &lt;td&gt;-2,147,483,648 到 2,147,483,647&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned __int32&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;%&amp;gt;&lt;/td&gt;
+          &lt;td&gt;0 到 4,294,967,295&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;__int64&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;%&amp;gt;&lt;/td&gt;
+          &lt;td&gt;-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned __int64&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;unsigned long long&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0 到 18,446,744,073,709,551,615&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;bool&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;false&lt;/code&gt;&lt;/strong&gt; 或 &lt;strong&gt;&lt;code&gt;true&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;char&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;-128 到 127（默认）  0 到 255（在通过使用 &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/zh-cn/cpp/build/reference/j-default-char-type-is-unsigned?view=msvc-170&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;/J&lt;/code&gt;&lt;/a&gt; 进行编译时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;signed char&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;-128 到 127&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned char&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;0 到 255&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;short&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;%&amp;gt;&lt;/td&gt;
+          &lt;td&gt;-32,768 到 32,767&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned short&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;unsigned short int&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0 到 65,535&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;long&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;%&amp;gt;&lt;/td&gt;
+          &lt;td&gt;-2,147,483,648 到 2,147,483,647&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned long&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;unsigned long int&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0 到 4,294,967,295&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;long long&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;无（但与 &lt;strong&gt;&lt;code&gt;__int64&lt;/code&gt;&lt;/strong&gt; 等效）&lt;/td&gt;
+          &lt;td&gt;-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;unsigned long long&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;无（但与 &lt;strong&gt;&lt;code&gt;unsigned __int64&lt;/code&gt;&lt;/strong&gt; 等效）&lt;/td&gt;
+          &lt;td&gt;0 到 18,446,744,073,709,551,615&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;enum&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;多种多样&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;float&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;3.4E +/- 38（七位数字）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;double&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;1.7E +/- 308（15 位数字）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;long double&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;与 &lt;strong&gt;&lt;code&gt;double&lt;/code&gt;&lt;/strong&gt; 相同&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;与 &lt;strong&gt;&lt;code&gt;double&lt;/code&gt;&lt;/strong&gt; 相同&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;wchar_t&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;__wchar_t&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0 到 65,535&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>【C/C&#43;&#43;】C语言大师：编得狂，骂得响</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b004/</link>
+        <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b004/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b004/c.png" alt="Featured image of post 【C/C&#43;&#43;】C语言大师：编得狂，骂得响" /&gt;&lt;h2 id=&#34;环境准备&#34;&gt;环境准备
+&lt;/h2&gt;&lt;h1 id=&#34;visual-studio下载&#34;&gt;Visual Studio下载
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;前往【&lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/zh-hans/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Visual Studio官网&lt;/a&gt;】，下载Community版安装程序&lt;/li&gt;
+&lt;li&gt;一直点下一步，默认安装即可(更改文件位置咨询我)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;理论知识&#34;&gt;理论知识
+&lt;/h2&gt;&lt;h3 id=&#34;企业实际开发的整形声明stdinth的引用&#34;&gt;🌟企业实际开发的整形声明：&lt;code&gt;stdint.h&lt;/code&gt;的引用
+&lt;/h3&gt;&lt;p&gt;实际开发过程中并不会用到&lt;strong&gt;short&lt;/strong&gt; ,&lt;strong&gt;int&lt;/strong&gt; , &lt;strong&gt;long&lt;/strong&gt;，我们该用什么呢，用Linux这些标准。这些标准我们都藏在一个头文件里（&lt;strong&gt;&lt;code&gt;#include &amp;lt;stdint.h&amp;gt;&lt;/code&gt;&lt;/strong&gt;）。我们可以点进去啊，按住**&lt;code&gt;Ctrl&lt;/code&gt;**点进去，这里面的代码不要动啊，你想动也不行。我们看一下这个源代码。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b004/j1.png&#34;
+	width=&#34;1879&#34;
+	height=&#34;773&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b004/j1_hu_ebffce62d7ecbf7d.png 480w, https://airmuamua.github.io/hugoweb/p/b004/j1_hu_462005890af6efa2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Microsoft Corporation. All rights reserved C语言的标准库文件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;583px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;非常🍐🎼啊，这是看C语言怎么编写的，就是C语言的创始人怎么定义这个东西的。我们来看一下，发现有很多的类型，&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b004/j2.png&#34;
+	width=&#34;1879&#34;
+	height=&#34;773&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b004/j2_hu_e1d194a0dbb3bf8.png 480w, https://airmuamua.github.io/hugoweb/p/b004/j2_hu_4d764266f74e0289.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;583px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这前面红色框我们现在看不懂，因为我们没学到结构体，所以看不懂这些东西，但是我们依稀的可以看到蓝色框这些东西，我们来看一下它有哪些类型。&lt;/p&gt;
+&lt;p&gt;那么还有一些其他的，但是我们后面再去学，我们现在没有学到。像绿色框中属于最小宽度整数类型，最小宽度整数类型是什么意思呢，就是保证它至少要有8位、16位、32位、64位的有效。这个以后再讲，一般新手不太可能用到。然后下面黄色框其实还有一些类型，哎大家很清楚的，这个fast的这个就相当于是什么，保证最快最小宽度的整数类型。&lt;/p&gt;
+&lt;p&gt;剩下的就不讲了，讲了没用，你们初学者不太能明白这是什么东西。你知道有这个东西就行。&lt;/p&gt;
+&lt;p&gt;这个&lt;strong&gt;char&lt;/strong&gt;类型我们现在没学到，所以我们现在就学到&lt;strong&gt;short&lt;/strong&gt; , &lt;strong&gt;int&lt;/strong&gt; , &lt;strong&gt;long long&lt;/strong&gt; 。你看它直接就把&lt;strong&gt;long&lt;/strong&gt;，忽略掉了，因为&lt;strong&gt;long&lt;/strong&gt;和&lt;strong&gt;long long&lt;/strong&gt;它会在不同的编译器下是有歧义的，对不对。所以它直接就忽略了，直接就统一吧，你要&lt;strong&gt;int&lt;/strong&gt;就32的你要&lt;strong&gt;long long&lt;/strong&gt;就64的。&lt;/p&gt;
+&lt;p&gt;所以我们现在就来写一下啊，来写一下，走你。我们做一个练习啊，简单的练习。这个练习就是确保我们可以用到这些所有的这些变量（除了char）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b004/j3.png&#34;
+	width=&#34;1879&#34;
+	height=&#34;773&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b004/j3_hu_ffdd37ee3d9797ca.png 480w, https://airmuamua.github.io/hugoweb/p/b004/j3_hu_71891bdd018fb9fe.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;自己一定要多敲，不要复制，这样才不会忘，一定要自己手敲&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;583px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>录取通知</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b006/</link>
+        <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b006/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b006/t1.png" alt="Featured image of post 录取通知" /&gt;&lt;h2 id=&#34;录取通知&#34;&gt;录取通知
+&lt;/h2&gt;&lt;p&gt;快递电话打来时，我正在整理电脑文件。电话那头说有个文件到了，需要签收。听到是“文件”，心里基本就确定了——算算时间，也该是它了。&lt;/p&gt;
+&lt;p&gt;其实早在一周前，我就在市招办网站上查到了录取状态，显示“已录取”。那会儿心里一块石头就落了地，所有的劲儿也提前释放得差不多了。所以这会儿收到实体的通知书，更像是走完一个必要的确认流程。&lt;/p&gt;
+&lt;p&gt;一个薄薄的文件袋，上面印着学校的名字。签收时手倒是挺稳，签完道了谢，拿着袋子慢慢走回家。小雨淅淅，但心情很平静，就像去取一份“结果”一样，知道只是需要拿到那张纸。&lt;/p&gt;
+&lt;p&gt;回到家，随手把袋子放在书桌上，没急着拆。先去喝了口水，又顺手把刚才没写完的博客暂时发布。从查到录取信息那天起，我连物流都懒得天天刷了，知道它总会到。真到了手上，感觉是“嗯，如约而至”，踏实，但没什么意外之喜。&lt;/p&gt;
+&lt;p&gt;忙完手头的事，才拿起文件袋。封口撕开得很顺畅，里面是几张纸。最上面那张，正是录取通知书。我的名字、专业、学院，都印在上面，和网上查到的信息一字不差。目光扫过，确认无误，心里最后那点微乎其微的“等实体”的念想也彻底消散了。&lt;/p&gt;
+&lt;p&gt;我把通知书收好，放在桌旁的格子中。看着它被妥帖地收好，心思已经完全不在“拥有”它的那一刻了。想起早已盘算起的事情：选课、住宿、开学要准备的东西……这张纸更像是一份正式的“开工通知”，提醒我该着手准备下一阶段的具体事务了。&lt;/p&gt;
+&lt;p&gt;它来了，一个阶段尘埃落定，新的阶段即将启动。心情很稳，带着对未来的规划，知道接下来该干什么了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【Hugo】Hugo&#43;Github 免费部署自己的博客</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b003/</link>
+        <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b003/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b003/hugo&#43;github.png" alt="Featured image of post 【Hugo】Hugo&#43;Github 免费部署自己的博客" /&gt;&lt;h2 id=&#34;环境准备&#34;&gt;环境准备
+&lt;/h2&gt;&lt;h3 id=&#34;git下载&#34;&gt;Git下载
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前往【&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git官网&lt;/a&gt;】，下载安装程序&lt;/li&gt;
+&lt;li&gt;一直点下一步，默认安装即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b003/git%E4%B8%8B%E8%BD%BD.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;412&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b003/git%E4%B8%8B%E8%BD%BD_hu_6193f01925a724b3.png 480w, https://airmuamua.github.io/hugoweb/p/b003/git%E4%B8%8B%E8%BD%BD_hu_6d7b8b5a85bc64a6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;git下载&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;596px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hugo下载&#34;&gt;Hugo下载
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前往【&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo Github Tags&lt;/a&gt;】，选择对应版本下载，下载后解压即可&lt;/li&gt;
+&lt;li&gt;Windows下载版本：&lt;strong&gt;hugo_extended_xxxxx_windows_amd64.zip&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;搭建博客&#34;&gt;搭建博客
+&lt;/h2&gt;&lt;h3 id=&#34;创建博客&#34;&gt;创建博客
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>我的一位二哥</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b002/</link>
+        <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b002/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b002/xg.jpeg" alt="Featured image of post 我的一位二哥" /&gt;&lt;h2 id=&#34;他是什么样的人&#34;&gt;他是什么样的人？
+&lt;/h2&gt;&lt;p&gt;一个比较贱的人（自称）&lt;/p&gt;
+&lt;h2 id=&#34;致小宝&#34;&gt;致小宝
+&lt;/h2&gt;&lt;p&gt;。。。高中认识的，多的不说（我怎么能真说呢，这不让他偷看呢么）&lt;/p&gt;
+&lt;h2 id=&#34;致宝哥&#34;&gt;致宝哥
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b002/xb.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;1920&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b002/xb_hu_330b08d29caba57f.jpg 480w, https://airmuamua.github.io/hugoweb/p/b002/xb_hu_6ff916432d76416d.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;金毛&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b002/xb2.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;1920&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b002/xb2_hu_78201be878a4478e.jpg 480w, https://airmuamua.github.io/hugoweb/p/b002/xb2_hu_b250d0384e38ae9d.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;都是本人发给我的&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这行子是真喜欢金毛，什么玩意。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>第一篇文章</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b001/</link>
+        <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b001/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b001/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%8A%A8%E6%BC%AB-%E7%81%B0%E5%8E%9F.png" alt="Featured image of post 第一篇文章" /&gt;&lt;h2 id=&#34;第一篇博客&#34;&gt;第一篇博客
+&lt;/h2&gt;&lt;p&gt;这是我写博客的第一天，嗯，很有生活了&lt;/p&gt;
+&lt;h2 id=&#34;致过往&#34;&gt;致过往
+&lt;/h2&gt;&lt;p&gt;我并不希望还没开始就结束了，但好像有些事是我导致的。我并不能够将这些事情处理好，我只是尽量的以我的方式来，我想的并不是很多，但也许就错在考虑的还不够多。&lt;/p&gt;
+&lt;h2 id=&#34;致今生&#34;&gt;致今生
+&lt;/h2&gt;&lt;p&gt;因为选择我们的路不同,所以我选择了新的征程.&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;引用
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b001/image.png&#34;
+	width=&#34;2160&#34;
+	height=&#34;2156&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b001/image_hu_f2285edeb0f76a81.png 480w, https://airmuamua.github.io/hugoweb/p/b001/image_hu_e173bc5a3aef9b3b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A willow’s branches reach but never touch— such is my love, forever hushed.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
