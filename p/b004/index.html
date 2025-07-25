@@ -268,13 +268,16 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#环境准备">环境准备</a></li>
-  </ol>
-
-  <ol>
+    <li><a href="#环境准备">环境准备</a>
+      <ol>
+        <li><a href="#visual-studio下载">Visual Studio下载</a></li>
+      </ol>
+    </li>
     <li><a href="#理论知识">理论知识</a>
       <ol>
         <li><a href="#企业实际开发的整形声明stdinth的引用">🌟企业实际开发的整形声明：<code>stdint.h</code>的引用</a></li>
+        <li><a href="#历史项目遗留">历史项目遗留</a></li>
+        <li><a href="#隐式和显式类型转换type-conversion">隐式和显式类型转换（Type Conversion）</a></li>
       </ol>
     </li>
   </ol>
@@ -359,15 +362,15 @@
     
     
     <h2 id="环境准备">环境准备
-</h2><h1 id="visual-studio下载">Visual Studio下载
-</h1><ul>
+</h2><h3 id="visual-studio下载">Visual Studio下载
+</h3><ul>
 <li>前往【<a class="link" href="https://visualstudio.microsoft.com/zh-hans/downloads/"  target="_blank" rel="noopener"
     >Visual Studio官网</a>】，下载Community版安装程序</li>
 <li>一直点下一步，默认安装即可(更改文件位置咨询我)</li>
 </ul>
 <h2 id="理论知识">理论知识
 </h2><h3 id="企业实际开发的整形声明stdinth的引用">🌟企业实际开发的整形声明：<code>stdint.h</code>的引用
-</h3><p>实际开发过程中并不会用到<strong>short</strong> ,<strong>int</strong> , <strong>long</strong>，我们该用什么呢，用Linux这些标准。这些标准我们都藏在一个头文件里（<strong><code>#include &lt;stdint.h&gt;</code></strong>）。我们可以点进去啊，按住**<code>Ctrl</code>**点进去，这里面的代码不要动啊，你想动也不行。我们看一下这个源代码。</p>
+</h3><p>实际开发过程中并不会用到<strong>short</strong> ,<strong>int</strong> , <strong>long</strong>，我们该用什么呢，用Linux这些标准。这些标准我们都藏在一个头文件里（<strong><code>#include &lt;stdint.h&gt;</code></strong>）。我们可以点进去啊，按住<code>Ctrl</code>点进去，这里面的代码不要动啊，你想动也不行。我们看一下这个源代码。</p>
 <p><img src="/hugoweb/p/b004/j1.png"
 	width="1879"
 	height="773"
@@ -382,7 +385,7 @@
 		data-flex-basis="583px"
 	
 ></p>
-<p>非常🍐🎼啊，这是看C语言怎么编写的，就是C语言的创始人怎么定义这个东西的。我们来看一下，发现有很多的类型，<img src="/hugoweb/p/b004/j2.png"
+<p>非常🍐🎼啊，这是看C语言怎么编写的，就是C语言的创始人怎么定义这个东西的。我们来看一下，发现有很多的类型<img src="/hugoweb/p/b004/j2.png"
 	width="1879"
 	height="773"
 	srcset="/hugoweb/p/b004/j2_hu_e1d194a0dbb3bf8.png 480w, /hugoweb/p/b004/j2_hu_4d764266f74e0289.png 1024w"
@@ -413,6 +416,217 @@
 		data-flex-basis="583px"
 	
 ></p>
+<h3 id="历史项目遗留">历史项目遗留
+</h3><p>其实在企业当中呢，有的人会发现很聪明啊：“很多的这些开源的这些项目其实它并不是都用这样的规范，我就看有些🐂🍺的项目啊。你比如说那GitHub上有Linux对吧，那人家这个Linux这么🐂🍺的项目人家都没用，你为什么叫我用。”肯定会有人这么说，人实际上是用了</p>
+<p>，<img src="/hugoweb/p/b004/j4.png"
+	width="1870"
+	height="979"
+	srcset="/hugoweb/p/b004/j4_hu_b3c45bbb8c38ee55.png 480w, /hugoweb/p/b004/j4_hu_f67ec1da11647e1f.png 1024w"
+	loading="lazy"
+	
+		alt="u8"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="191"
+		data-flex-basis="458px"
+	
+></p>
+<p>它写的这个<strong>u8</strong>实际上是它自己在写了一个，你后面会学到<strong>typedef</strong>，它自己呢就是说把<strong>uint_32</strong>或者说把<strong>uint_8</strong>给写进去了，这样的话它就可以直接去用了，直接去写<strong>u8</strong>。实际上它写的是什么，哎对，显而易见。有的时候呢你会看到一些比较大的项目它上面写的是<strong>u32</strong>，其实是一样的，其实就相当于<strong>uint32_t</strong>,可以这么理解，只是它自己定义了一个<strong>uint32_t</strong>，普遍的它会这么去写。所以你要知道它这里为什么有<strong>u8</strong>，因为它自己定义了一个类型。屌不屌。</p>
+<p>有些项目它是用的，有些项目它不用。为什么有的地方用<strong>int</strong>，有的地方不用。我来告诉你为什么。因为linux是早期的，你要知道Linux是上世纪的操作系统，所以早期的代码库用的都是<strong>int</strong>类型。因为当时广泛认为这是32位，因为那个时代，在这些操作系统中使用<strong>int</strong>可以提供最佳的性能。为什么，因为它与当时的处理器的自然字长相匹配，这是历史的原因。所以你见到有一些历史的项目它还在用<strong>int</strong>或者说<strong>short</strong>或<strong>long</strong>这种类型，其实是很正常的，因为他是历史原因。它要保证这个软件能用，你不能说我把这个软件全都改成<strong>uint32_t</strong>。为什么不可以，因为有的机器，比如说很老很垃圾的这些机器，你Linux操作系统那有些嵌入式的设备还在用啊，嵌入式的设备有的它不是32位它可能还是16位甚至更低。Linux确保最大的兼容性，可以支持更多的设备。所以它宁愿去使用以前的<strong>int</strong>类型或<strong>long</strong>类型或<strong>short</strong>类型它都不愿意去使用现在的这个原因。</p>
+<p>还有一个方面移植是难的。我们知道软件工程当中有个术语叫移植性。什么叫移植性啊，许多项目老的项目都是用<strong>int</strong>类型，我把它挪过来就很难。因为<strong>int</strong>类型是所有的C标准当中都可以去用的。但是我们发现<strong>int32_t</strong>在是什么，<strong>C99</strong>之后才有的标准。还是那句话，在某一些旧的或者是嵌入式系统当中是可能是不可用的。</p>
+<p>还有一个方面就是它性能的问题。有的就说：哎~他怎么还跟性能有关系。有的啊，如果你要使用<strong>int</strong>类型，它看起来在现在的软件开发当中是不标准的，因为大家如果说你现在开发个网站什么的，如果你简单的去定义成<strong>int</strong>它可能不太标准。为什么，就是因为现在软件开发，很少会用到以前的那种老的操作系统去访问。但是Linux不一样，Linux它是有历史价值的，而且Linux它这么多年过来它一直在用，这是不一样的。你比如说你要开发一个网站。那可能你要做的就是符合21世纪的网络流量标准对吧。那上世纪的设备你就不用管了，没有人用上世纪的设备去浏览网页。但Linux不一样，有很多上世纪的设备还在使用，这是分情况的。</p>
+<p>那么在这种情况，有历史的这种遗留，使用这种<strong>int</strong>类型，通常使用这种例子，我们有一个词叫什么，叫系统，叫做OS的自然字长。就是使用<strong>int</strong>类型啊，它在这种情况下它反而性能会更好。因为它与处理器的内部寄存器大小相匹配了，这基本上都是32位的。所以通常情况下使用<strong>int</strong>类型问题是不大的。而且处理这种32位整形不需要额外的转换或者是操作。（后面会讲类型转换的问题）</p>
+<p>还有就是向后兼容，什么叫向后兼容，意思就是说因为C语言当中它不仅仅是有这些东西，你会引入一些stdio.s是不是，你会引入一些头文件。那么其实是在第三方的市场上，你包括像我们这个开源的项目上，有很多大量的库，还有API都使用<strong>int</strong>类型。如果你去改变去固定它的大小，它可能会破坏现在代码的兼容性。你比如说我这个项目叫A，我这个项目呢我引用了别人的库，这个库呢叫做APIA，那么它这个库呢它里面用的是int类型，这个库可能用<strong>int</strong>类型，它保证是兼容更多的设备。但是你这个A呢你做了一个<strong>int64</strong>位的操作，如果你去改写它的函数<strong>override</strong>，叫重写有一个概念，这个是后期可能有点难了，意思就是告诉你这可能会发生一些问题，这个问题需要你自己去处理。但是不代表说我们就不能用int32_t或int64_t这种东西。反而应该要使用，确定你的产品面向的是谁，这个是很重要的。我举个最简单的例子：网络通信文件格式需要数据对齐，这种场合固定大小是必须的。也就是说你编写网络的一些通信的一些软件的时候，固定大小的数据类型是必须的。就相当于有一个手术，得了病，医生就觉得这个东西还不如不取，开刀把它取出来呢，可能还会危险生命。</p>
+<p>并不是所有地方都一定确保要用，而是现在的软件工程里，用这个的时候尽可能要确定好宽度，如果它不能确定宽度了，我们就不确定宽度啊，要分场合。但大多数情况下我们都是要确定宽度的，就现在来说，以前的不算。</p>
+<h3 id="隐式和显式类型转换type-conversion">隐式和显式类型转换（Type Conversion）
+</h3><p>放在这里来讲按理来说是比较超纲的，但是我就故意偏偏在这个地方讲。因为很多人去讲类型转换的时候，往往是在学到浮点数，甚至是学到面向对象语言的时候才会讲，涉及到类型转换。因为在C语言中的类型转换一定要先去理解，我前面说的这些类型的计算它的范围。如果不能理解的话你是没办法去理解什么叫做类型转换的。说白了就是什么意思呢，我给大家举个例子大家就清楚了。</p>
+<p><img src="/hugoweb/p/b004/jtc1.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b004/jtc1_hu_d7bf1ccaaca55e41.png 480w, /hugoweb/p/b004/jtc1_hu_796f56b01d20dd7f.png 1024w"
+	loading="lazy"
+	
+		alt="类型转换的一个案例：隐式转换"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p>大家看，这个案例意味着什么呢，定义了一个<strong>int16_t</strong>和一个<strong>int32_t</strong>。那么大家看，<strong>int16_t</strong>相当于小的一个类型，<strong>int16_t</strong>肯定没有<strong>int32_t</strong>这个数据大对吧。32767这是<strong>int16_t</strong>的最大值了，所以说32比16肯定大对吧。（我tm没吃饭就开始写了）大家注意看，这small相当于什么，相当于我们去超市买东西，我们看货架上有一个东西。small呢就得这东西不错哦，正好呢它能装的下，你看货架上的这个东西啊，每个人推个购物车，small这购物车这么大，big那购物车又那么大，两个购物车不一样大，对不对，它这货在货架上看到这个东西，唉，它觉得这个东西挺好它装到small那购物车上，这是不是第一步，把货装到袋子里对吧，变量赋值我们以前有一个简单的比喻对吧，就相当于这样的是吧，从右边向左边的那种感觉。那么现在问题来了，那么现在big走过来了看见small买的这个东西还真不错，它觉得它也想要，它说“small你帮我也拿一份过来。”&ldquo;啊行。&ldquo;看到没有，就第9行，small呢把它的东西交给了big,它是拷贝一份交给它，他不是把这东西给它然后small没有啦。所以说small它就像它就把这个货呢又拿了一份，拿了份跟它一样的交给了big。那big你说它能吃得下吗，它当然能吃得下，因为这个货就这么大对不对，small吃的下那big呢它更能吃得下，这个意思懂了吧。</p>
+<p>但是有一种清况就不一样了，这样的话就叫什么，有一个词叫做隐式。就是C语言呢它帮我们自动转换了，因为bigNum是int32smallNum是int16，所以它会帮我们自动转换不用我们过多的去考虑。因为刚才我说了是吧，这个small呢这么大，这个big那么的，small要装下多么大的一个货物big都吃得下。这个时候C语言就会自动帮我们去自动去转换就不用去考虑这个问题，这种我们叫做隐式转换。</p>
+<p><img src="/hugoweb/p/b004/jtc2.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b004/jtc2_hu_916776d68d57cca1.png 480w, /hugoweb/p/b004/jtc2_hu_804d8fa4826da91a.png 1024w"
+	loading="lazy"
+	
+		alt="显式转换、强制转换"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p>到了这个时候他俩就变了，相当于什么呢，把这个大的东西给小的。这个big呢从这个货架上看上了一个东西，蛮大的，差不多有它一半多，它就放到了自己的购物车里了，它觉得自己放的下，没问题。那small觉得：哎，我也要一份这个大彩电，看着挺舒服的。然后呢它看了看自己的购物车装不下好像，因为它的这个数值已经远远超过了<strong>int16_t</strong>。于是呢，这个big它就开始使坏了说：你必须给我拿下，你看我都能装下，你肯定能装下对吧。显式转换吧，开始画饼了，我能办到的你也能办到。small一听：行，没问题。于是呢这个big就拿了一份它的大彩电塞给了small，这个过程叫强制的，又称为一个叫显式。就交给它，那交给它有一个什么后果呢。我们看最后small的值。</p>
+<p><img src="/hugoweb/p/b004/jtc3.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b004/jtc3_hu_895fb31a5e0cd419.png 480w, /hugoweb/p/b004/jtc3_hu_c7a3d6998bb9c51c.png 1024w"
+	loading="lazy"
+	
+		alt="显而易见，这个数就崩了"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>就它装不下这些东西硬要就相当于是一个人的胃口就这么大你非得要给他吃下，强制让他吃，就跟咱们中国的家长一样是吧。不行给我吃，就这种，它就崩了，崩盘了。它扛不住，所以这样就显而易见了。所以我们在这个时候，想要去了解这个程序的时候，我们就要小心了，就是说它不一定有的时候它自动会给我们转，转完的时候它就崩了。那这种情况下，程序编写的过程当中，是不是应该避免这个问题。我们现在只是int16和int32的转换，那我们现在写一个极端的案例。</p>
+<p><img src="/hugoweb/p/b004/jtc4.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b004/jtc4_hu_16039108e2a2b5de.png 480w, /hugoweb/p/b004/jtc4_hu_edc8330a1a2f448c.png 1024w"
+	loading="lazy"
+	
+		alt="大家猜一下结果"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b004/jtc5.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b004/jtc5_hu_8717c27e995492c6.png 480w, /hugoweb/p/b004/jtc5_hu_b631ccc4bba4398.png 1024w"
+	loading="lazy"
+	
+		alt="给大家看一下C语言给UINT32_MAX的定义"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b004/jtc6.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b004/jtc6_hu_b76f8793e776f482.png 480w, /hugoweb/p/b004/jtc6_hu_dbc498e1d3354fda.png 1024w"
+	loading="lazy"
+	
+		alt="看到没有，变成了-1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>为什么，嗨嗨显而易见吧，因为uint最大值显然和int不是一个。是不是很巧妙，那么我们把它干什么呢，我们现在就是吧uint这个值强制给了int类型。但是我们要记得<strong>uint32_t</strong>最大值是不是正的42个亿，也就是意味着<strong>int32_t</strong>它的大致是21个亿，所以它肯定就溢出了嘛。溢出了之后它就会显示-1，你强制转换就像刚才那样，我吃撑了，我装不下了，就报错了。这是一种类型转换的报错， 我给大家解释一下。那么如果我们现在强制给它转会变成什么，怎么强制给他转。</p>
+<p><img src="/hugoweb/p/b004/jtc7.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b004/jtc7_hu_916d5bf684336571.png 480w, /hugoweb/p/b004/jtc7_hu_6c2f9ffd28b51026.png 1024w"
+	loading="lazy"
+	
+		alt="我们强制在这里给它写上一个(int32_t)"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p>也就意味着你给我硬吃。刚才是什么，编译器自动去吃，试试看能不能吃进去。编译器认为我吃不进去，然后现在我强行塞给你。我们看看</p>
+<p><img src="/hugoweb/p/b004/jtc8.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b004/jtc8_hu_a2a984af47fe0ceb.png 480w, /hugoweb/p/b004/jtc8_hu_afa069bce317be43.png 1024w"
+	loading="lazy"
+	
+		alt="结果是一样的"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>因为无论如何它都塞不进去。就是不管是隐式还是显式它都塞不进去。如果我们现在没有**(int32_t)**，这个叫隐式转换，有就是显式转换，就是我强制把它做一个转换。说白了就是硬塞这种感觉啊。</p>
+<p>刚才是一种无符号到有符号，那么还有一个就是大范围到小范围。</p>
+<p><img src="/hugoweb/p/b004/jtc9.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b004/jtc9_hu_cc7287b8222f03d3.png 480w, /hugoweb/p/b004/jtc9_hu_dbbf7dd1959bd547.png 1024w"
+	loading="lazy"
+	
+		alt="大范围到小范围的强制转换"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b004/jtc10.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b004/jtc10_hu_422459d0916a28de.png 480w, /hugoweb/p/b004/jtc10_hu_3a667027c06e1a05.png 1024w"
+	loading="lazy"
+	
+		alt="你看也不行，因为它溢出了啊"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>那么还有一个是什么呢，小范围转换为大范围（扩展负数）</p>
+<p><img src="/hugoweb/p/b004/jtc11.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b004/jtc11_hu_14041cba4070f5d7.png 480w, /hugoweb/p/b004/jtc11_hu_7ddab249c57e5751.png 1024w"
+	loading="lazy"
+	
+		alt="大范围到小范围（扩展负数）"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b004/jtc12.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b004/jtc12_hu_d860fd2bff79b064.png 480w, /hugoweb/p/b004/jtc12_hu_96c57cb22f273b2c.png 1024w"
+	loading="lazy"
+	
+		alt="大家也都能猜到了，肯定是溢出啊。明明是-1，它给我干到了40多个亿"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>这三种情况都会出现问题。</p>
+<ul>
+<li>无符号到有符号</li>
+<li>大范围到小范围</li>
+<li>小范围转换为大范围（扩展负数）</li>
+</ul>
+<p>那么有人说了，那你既然写了这么多那你强制转换的意义在哪呢。有意义，你比如说我们小范围到大范围的。把int16的一个小的正的值给uint32，哎，是不是可以啊。它就可以强制类型转换了。当然这个也可以是隐式类型转换了，因为它可以自动去转换。那么同样的，有人说：啊，你这不是没事找事吗，我明明可以自动转换你要给我强制转换这样一个写法。我跟大家讲，这个写法是非常有必要的。就是我废话了这么多我就告诉你显式转换你要真的想转换你尽可能不要去写隐式转换，就是你尽可能要去写这么一步。为什么，有很多问题：</p>
+<p>第一个，你写成显式转换的时候，这个代码意图更明显。作为开发者你不一定记得代码是什么时候转换的。如果你不看的话它很有可能就是一个值赋给另一个值，因为我们是smallNum赋值给bigNum看起来是一个小的值赋给大的值好像比较明显，但如果说你有的变量它不一定是smallNum和bigNum，你可能定义的A和B那种傻逼的变量你不知道谁大谁小。因为我们知道有大小范围，有大到小的有小到大的还有有符号到无符号的，你这种情况下如果你不写这一步没有写显式，虽然它隐式是可以转了它完成相同的功能了，你可以理解为有这种类似的相同的功能，但是如果你不写和写是两码事。第一个提高代码的清晰度是有必要的，显式转换可以让这个代码变得更明确一点对吧，因为你开发又不是你一个人再开发，好多人都跟你一起去开发，你不能直接就把它变成隐式的，大家不知道你在干什么，一旦出了问题溢出了该怎么办，不知道。大家都在找你的bug，大家都在找你的bug没想到就是这一步，没写啊。很多人都这样，你别笑啊。有的新手到这一步就觉得怎么可能，他笑，有的时候你他妈的以后你就知道了，你学到其他语言的时候就空指针异常很有可能就是因为你这个类型转换的问题。</p>
+<p>那么第二个问题就是什么，它可以处理潜在的转化问题，你比如说我们刚刚这个案例是由小到大的范围去扩展是强制转换这样是可以成功的。可以通过的，而且数据都正常的，但是如果大到小这个范围，如果说我们出错了，我们很容易就知道，哦它会出问题。比如说我写个int32 =123的再把它给int16那就是大到小，大家注意看我的数字是多少，123也就是int16完全吃得下，我加上**(int16_t)**,所有人都知道我在强制转换，能听懂吧，所有编写这个程序的人都知道我在进行类型转换，我这里是可以转换过来的，因为什么，因为我可以吃得下。但如果有一天有一个程序员吧这个变量值给改了，就比如说改成1231232131312，这个时候就报错了，他就会变成负数。如果有其它程序员再去做这件事情或者哪怕就是你过两天，是吧比如说你昨天晚上喝酒喝多了，今天早上去上班，你说你他妈的怎么变成负数了。这个时候呢你一打开这个程序软件一看，哦这个变量值我做了一个强制转换，有可能这个出问题。然后呢我马上就找到这个变量定义在哪，最后我发现我这个设置是int32我在强制转换成16，说白了在程序里面你真的去开发的时候这个变量很有可能是看不见的，他是一个变量嘛。那有可能就略过了，我就需要注意哪里到底出错了，他是这样一个作用。这是很有用的，不是说为什么我们在真正去写代码的时候一定要去写成显式的而不是要刻意的有一个隐式的。那这样的话隐式当然也可以用，但如果你这里不写，你很有可能会出现什么状况呢。哎呀，这步出错了，怎么回事。哎怎么能出错呢变成负的了，我找不到了啊，不知道在哪，看不见。隐式的嘛，藏起来，看不见。就会出现这种，你写个显式转换，马上就清楚了。那同样的这个无符号和有符号，这个也就都能理解了。</p>
 
 </section>
 
@@ -474,6 +688,30 @@
 
         <div class="article-details">
             <h2 class="article-title">【C/C&#43;&#43;】C/C&#43;&#43;语言文档</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b007/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b007/yj2.59bd1447f8311ffbdf64eb695ca8620e_hu_49aa80e2c8032e99.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【数学】高等数学"
+                        data-key="b007" 
+                        data-hash="md5-Wb0UR/gxH/vfZOtpXKhiDg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【数学】高等数学</h2>
         </div>
     </a>
 </article>

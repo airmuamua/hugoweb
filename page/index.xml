@@ -21,7 +21,30 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://airmuamua.github.io/hugoweb/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+        <description>&lt;h1 id=&#34;你好我是空气炸锅中&#34;&gt;你好，我是空气炸锅中👋
+&lt;/h1&gt;&lt;p&gt;这个名字是2022年是喜欢天空的我和为了表示正在进行和努力中拼撞出来，索性用到现在，你还可以叫我Skye（一开始的网名）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;狮子&lt;/li&gt;
+&lt;li&gt;脑袋像空气炸锅&lt;/li&gt;
+&lt;li&gt;业余研究各种新花样&lt;/li&gt;
+&lt;li&gt;喜欢吃炸酱面&lt;/li&gt;
+&lt;li&gt;最喜欢的编辑器是VS Code&lt;/li&gt;
+&lt;li&gt;会一些摄影&lt;/li&gt;
+&lt;li&gt;不会粤语爱听粤语歌&lt;/li&gt;
+&lt;li&gt;小屁孩一个&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;与我联系&#34;&gt;与我联系
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;QQ：2669316502&lt;/p&gt;
+&lt;p&gt;微信：V7Air6-16&lt;/p&gt;
+&lt;p&gt;微博：空气炸锅中&lt;/p&gt;
+&lt;p&gt;抖音号：airmuamua&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于站点&#34;&gt;关于站点
+&lt;/h2&gt;&lt;p&gt;站点名字为Skye，注册域名时想了半天，想到我最初上网的时候，便决定再次启用这个名字。&lt;/p&gt;
+&lt;p&gt;会持续更新，并且写一些关于我的文章或者一些学习心得之类的。&lt;/p&gt;
+&lt;p&gt;建站时间：2025年7月22日&lt;/p&gt;
+&lt;h2 id=&#34;心路&#34;&gt;心路
+&lt;/h2&gt;&lt;p&gt;最一开始尝试用hexo搭建，但是在我使用hexo的过程当中bug层出不穷，转而我就放弃了一段时间。之后我接触到了hugo，更加的开箱即用。我便选择了使用hugo来搭建自己真正意义上的第一个个人博客。&lt;/p&gt;
 </description>
         </item>
         <item>
