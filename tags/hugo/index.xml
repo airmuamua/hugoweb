@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Hugo on Skye</title>
+        <link>https://airmuamua.github.io/hugoweb/tags/hugo/</link>
+        <description>Recent content in Hugo on Skye</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>空气炸锅中-Skye</copyright>
+        <lastBuildDate>Wed, 23 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://airmuamua.github.io/hugoweb/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Hugo】Hugo&#43;Github 免费部署自己的博客</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b003/</link>
+        <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b003/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b003/hugo&#43;github.png" alt="Featured image of post 【Hugo】Hugo&#43;Github 免费部署自己的博客" /&gt;&lt;h2 id=&#34;环境准备&#34;&gt;环境准备
+&lt;/h2&gt;&lt;h3 id=&#34;git下载&#34;&gt;Git下载
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前往【&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git官网&lt;/a&gt;】，下载安装程序&lt;/li&gt;
+&lt;li&gt;一直点下一步，默认安装即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b003/git%E4%B8%8B%E8%BD%BD.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;412&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b003/git%E4%B8%8B%E8%BD%BD_hu_6193f01925a724b3.png 480w, https://airmuamua.github.io/hugoweb/p/b003/git%E4%B8%8B%E8%BD%BD_hu_6d7b8b5a85bc64a6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;git下载&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;596px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hugo下载&#34;&gt;Hugo下载
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前往【&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo Github Tags&lt;/a&gt;】，选择对应版本下载，下载后解压即可&lt;/li&gt;
+&lt;li&gt;Windows下载版本：&lt;strong&gt;hugo_extended_xxxxx_windows_amd64.zip&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;搭建博客&#34;&gt;搭建博客
+&lt;/h2&gt;&lt;h3 id=&#34;创建博客&#34;&gt;创建博客
+&lt;/h3&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
