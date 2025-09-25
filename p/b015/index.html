@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="体验C编程的创新之旅-3">
+<title>【C/C&#43;&#43;】C语言「第三章」</title>
+
+<link rel='canonical' href='https://airmuamua.github.io/hugoweb/p/b015/'>
+
+<link rel="stylesheet" href="/hugoweb/scss/style.min.902578b43aaf1ca6f57d0aaa5332a3acc6057195765cc77648a43fa545df29ec.css"><meta property='og:title' content="【C/C++】C语言「第三章」">
+<meta property='og:description' content="体验C编程的创新之旅-3">
+<meta property='og:url' content='https://airmuamua.github.io/hugoweb/p/b015/'>
+<meta property='og:site_name' content='Skye'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='教程' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:published_time' content='2025-08-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-05T00:00:00&#43;00:00'/><meta property='og:image' content='https://airmuamua.github.io/hugoweb/p/b015/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%AE%80%E5%8D%95%E7%9A%84%E8%83%8C%E6%99%AF.png' />
+<meta name="twitter:title" content="【C/C++】C语言「第三章」">
+<meta name="twitter:description" content="体验C编程的创新之旅-3"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://airmuamua.github.io/hugoweb/p/b015/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%AE%80%E5%8D%95%E7%9A%84%E8%83%8C%E6%99%AF.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugoweb/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/hugoweb/img/avatar_hu_21e8d998ffcce10.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">☁️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugoweb">Skye</a></h1>
+            <h2 class="site-description">空气炸锅中</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/airmuamua'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugoweb/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>档案</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#运算符的介绍">运算符的介绍</a></li>
+    <li><a href="#数据对象与左值和右值">数据对象与左值和右值</a></li>
+    <li><a href="#多重赋值">多重赋值</a></li>
+    <li><a href="#复合赋值">复合赋值</a>
+      <ol>
+        <li><a href="#选修">（选修）</a>
+          <ol>
+            <li></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#算数运算符的应用">算数运算符的应用</a></li>
+    <li><a href="#一元与二元运算符">一元与二元运算符</a></li>
+    <li><a href="#前缀后缀递增与递减">前缀后缀递增与递减</a>
+      <ol>
+        <li><a href="#选修题外话">（选修）题外话</a></li>
+      </ol>
+    </li>
+    <li><a href="#按位移位运算符">按位移位运算符</a></li>
+    <li><a href="#按位移位的另外问题">按位移位的另外问题</a></li>
+    <li><a href="#逻辑的真与假c关系运算符">逻辑的真与假、C关系运算符</a></li>
+    <li><a href="#条件表达式运算符">条件表达式运算符</a></li>
+    <li><a href="#按位运算符">按位运算符</a>
+      <ol>
+        <li><a href="#按位与运算符">按位“与”运算符&amp;</a></li>
+        <li><a href="#按位与或">按位“与或”|</a></li>
+        <li><a href="#按位异或">按位“异或”^</a></li>
+        <li><a href="#选修交换两个数的值">（选修）交换两个数的值</a></li>
+      </ol>
+    </li>
+    <li><a href="#按位取反">按位取反~</a>
+      <ol>
+        <li><a href="#题外话">题外话</a></li>
+      </ol>
+    </li>
+    <li><a href="#选修待完善掩码与电路遥控led灯练习">（选修.待完善）掩码与电路遥控LED灯练习</a></li>
+    <li><a href="#c逻辑运算符">C逻辑运算符</a></li>
+    <li><a href="#逗号运算符">逗号运算符</a>
+      <ol>
+        <li><a href="#选修-1">（选修）</a></li>
+        <li><a href="#开骂">(开骂)</a></li>
+      </ol>
+    </li>
+    <li><a href="#计算的优先级和顺序">计算的优先级和顺序</a>
+      <ol>
+        <li><a href="#为什么加号减号一元的运算符比二元的优先级高">为什么加号减号一元的运算符比二元的优先级高</a></li>
+      </ol>
+    </li>
+    <li><a href="#表达式">表达式</a></li>
+    <li><a href="#复合语句">复合语句</a></li>
+    <li><a href="#类型转换">类型转换</a></li>
+    <li><a href="#第三章结束语">第三章结束语</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/hugoweb/p/b015/">
+                <img src="/hugoweb/p/b015/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%AE%80%E5%8D%95%E7%9A%84%E8%83%8C%E6%99%AF_hu_1d3f2ef0e8172e0a.png"
+                        srcset="/hugoweb/p/b015/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%AE%80%E5%8D%95%E7%9A%84%E8%83%8C%E6%99%AF_hu_1d3f2ef0e8172e0a.png 800w, /hugoweb/p/b015/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%AE%80%E5%8D%95%E7%9A%84%E8%83%8C%E6%99%AF_hu_2f206d5a30541be9.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第三章」" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/hugoweb/categories/%E5%8F%AF%E8%83%BD%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84%E7%AC%94%E8%AE%B0/" style="background-color: #3CB371; color: #fff;">
+                可能会用到的笔记
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugoweb/p/b015/">【C/C&#43;&#43;】C语言「第三章」</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            体验C编程的创新之旅-3
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 05, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="第三章">第三章
+</h1><h2 id="运算符的介绍">运算符的介绍
+</h2><p>运算符这一章节其实实际上是最简单的一章节，很多人都觉得运算符他妈的很傻逼，那是因为你考试傻逼啊不是运算傻逼。表达式和语句的话我们不按照书讲啊，因为没有任何教材能符合我们的标准啊，包括市面上你能见到的书都不符合我们的标准。至于表达式这种东西我们前段时间在C语言教学的前面已经讲了什么叫表达式（expression）什么叫语句（statement），所以我们这里就不多说了。</p>
+<p>那么书籍的话一般会分为这几大类，一类是基本运算符、一类是其他运算符（我们可以理解为关系运算符）。也就说运算符在C语言当中有四大运算符：</p>
+<ul>
+<li>
+<p>算数运算符，算说说白了就是用来加减乘除的是吧</p>
+</li>
+<li>
+<p>关系运算符，</p>
+</li>
+<li>
+<p>逻辑运算符，非（!）与（ &amp;&amp;）或（||）</p>
+</li>
+<li>
+<p>赋值运算符，=</p>
+</li>
+</ul>
+<h2 id="数据对象与左值和右值">数据对象与左值和右值
+</h2><p>变量为左值，数据为右值把右边的丢给左边的</p>
+<h2 id="多重赋值">多重赋值
+</h2><p><img src="/hugoweb/p/b015/jfz1.png"
+	width="1853"
+	height="773"
+	srcset="/hugoweb/p/b015/jfz1_hu_d274d73220439b89.png 480w, /hugoweb/p/b015/jfz1_hu_ccde4ae9c1fc1c58.png 1024w"
+	loading="lazy"
+	
+		alt="这里也注释了x,y,z仅作为测试程序"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="239"
+		data-flex-basis="575px"
+	
+></p>
+<p><img src="/hugoweb/p/b015/jfz2.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b015/jfz2_hu_7116d4622865553e.png 480w, /hugoweb/p/b015/jfz2_hu_5aabd22b01829ddb.png 1024w"
+	loading="lazy"
+	
+		alt="结果"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>想象一下，你有一桶漆三面墙。你现在要给所有的墙都涂上相同的颜色，但是它是有步骤的，你要按顺序来。那么在C语言当中我们有一个说法叫做多重赋值。这个多重赋值就相当于这个意思，一次性给多个变量赋上相同的值。但是呢不好意思的是我们在C语言当中，他赋值的时候是从右边往左边去赋值，他是这样一个过程。</p>
+<p>多重赋值就是考试的时候，中国的考试可能会有内陆的考试可能会有多重赋值。说白了就是闲的没事找事，真正程序的时候不会这样写，允许通过但是不允许这样去写，你要知道它的原理是什么啊。所以我们在真编程的时候只会把每一个变量分行去赋值。当然这个变量名也是毫无意义的，这里也是不应该的。因为你在公司里写代码一个团队写代码别人不知道x，y，z是什么东西。</p>
+<h2 id="复合赋值">复合赋值
+</h2><p>比如说expression1 += expression2可以理解为 expression1 = expression1 + expression2，复合赋值运算符将会导致原地修改。</p>
+<h3 id="选修">（选修）
+</h3><p>但是啊它们有一种微小的差距，这最后的结果上它是一样的，但是某些情况下，像复合赋值运算符它可以提供更好的性能，还有一个就是更清晰的代码意图。为什么，因为复合赋值语句从表面上来说就是要把这个变量值给它原地修改了对吧。什么叫原地修改，就是让它自个加上另一个东西或减去另一个东西或乘以另一个东西，说白了就是我原本的expression1，在它自个身上做出一个运算，再复制给它自个，就是对它自个进行修改，然后呢再赋值给它自个，这种叫做原地操作。像这种复合运算符，直接了当，一下就知道了。我表明了这个变量要在原地上被修改，然后再赋值。但是expression1 = expression1 + expression2这种情况它表示为什么呢，它表示为右值相加计算完成之后再赋值给左值，它有这样一个意义。但是如果我们是符合赋值语句的时候，它的意义就非同凡响啊，虽然结果是一样的。它的意义是什么，在它自个身上做一个运算，相当于变量要被原地修改，是这么个意思。但是我跟大家讲，现代编译器通常能够优化这个问题。你比如说我们后续不是简单的这种加减乘除这种操作，我们后面会学到结构体（后面会学，现在不学），还有一个就是面向对象语言当中比如说C++或者是Java这种，大型的类或者是一个object（如果你学过Java就知道了有一个对象）。那么复合运算符可能会避免不必要的对象复制，它直接原地修改了对象，然后从而提高性能。就是说它不比拷贝一份做出计算，在原地上修改，做出了一个性能的优化。所以从本质上来说如果你想要原地修改这个变量的值，你就使用复合表达式，第一从代码的阅读来看它是好的，因为更直观。你告诉他们你就要原地去修改这个东西然后复制它。第二它从性能上从现代的编译器乃至从其他的高级语言当中可以提高性能，明确的告诉人们变量将在远地方的位置被修改，尤其是在对代码维护理解上或者说涉及复杂的表达式和大型的对象和类的这些迁移或使用的时候，这个代码的清晰度可能是要优于另一种方式。那么在英文当中呢我们有一个词，软件工程有一个词叫做 In-place Modification 原地修改，它就意味着变量的值将在原始的存储位置被更新，而不是在另一个位置简单常见一个新的值做出计算然后再将新的值赋值给原先的值。</p>
+<p>那么它在C语言当中，我们初学者后期可能会用到的是什么，数组和指针可能会用到。你学到后面的时候可能会用到复杂的数据结构也会用到复合赋值运算符，因为它的性能它不会单独去拷贝一份出来去计算。所以你要知道啊，它的优势在哪里，就在这里。我们后续的时候，课程的最后几章会学习到结构体，我们那时候就会很清楚为什么啊。</p>
+<h6 id="开骂题外话">（开骂）题外话
+</h6><p>C语言它之所以有这个东西的存在就说明它有存在的必要性，它在某些场景上会用到。只是大学不会去教这样的东西，因为大多数的大学教师呢，它没有去企业参加过企业的项目开发，所以这些东西他很难去用到。那么这也就是为什么大学从来就不告诉你，学这个东西它到底有什么用，这些东西会用在哪，咱们的每一刻我都会告诉你这个东西的用途在哪，用最简单的案例告诉你这个东西是有用途的。虽然这个代码简单，但是它就是很实用，它就是在企业当中都是活生生的案例，它就是应用的场景是活生生的，你不得不重视它。那么很多人都会说我学了这个东西它到底有什么用，包括很多人会问我说我学数据结构到底有什么用，我没开出来有什么用。是因为教你数据结构的人他没有在企业开发过，他不知道数据结构会用在哪，这是非常可怕的。就是我学了之后我学懂了没有？是一个问题。我学会了没有？是一个问题。我会用了没有？是一个问题。我知不知道它在哪？又是另一个问题。所以这个相当重要，我可以告诉你学而不用就是白学。</p>
+<h2 id="算数运算符的应用">算数运算符的应用
+</h2><p>没什么好讲的，就说一个%取模，就是求余数，当然你得是整数不能是浮点数</p>
+<h2 id="一元与二元运算符">一元与二元运算符
+</h2><p><img src="/hugoweb/p/b015/jyy1.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jyy1_hu_22367e284dd0caef.png 480w, /hugoweb/p/b015/jyy1_hu_3762b154577ea9a1.png 1024w"
+	loading="lazy"
+	
+		alt="一元运算符"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p>它的含义是什么呢，一次运算只需要操作一个数。你比如说我这次操作只操作了number_1，所以说呢这个数就是- -10，这个操作整体是一个右值，那这个操作他就叫一元，因为它只有一个负号。</p>
+<p>但是有一种情况就不一样了，</p>
+<p><img src="/hugoweb/p/b015/jyy2.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jyy2_hu_8b1e702b03f1438b.png 480w, /hugoweb/p/b015/jyy2_hu_6f3210be766a3621.png 1024w"
+	loading="lazy"
+	
+		alt="注意看total_number"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p>这里的减号就不一样了，之前的代表的是负数取负嘛对吧，那你这时候是什么呢，是取减。那注意这个时候我们是有区别的，有什么区别呢，大家看我这里是操作两个数。因为我这里减号是什么，两个数的操作作为右值，我number_1减number_2就意味着我操作的是两个数，所以呢这里的这个减号称之为二元运算符。</p>
+<h2 id="前缀后缀递增与递减">前缀后缀递增与递减
+</h2><p>那么因为递增运算符和递减运算符在我们后续当中循环里可能经常会使用到，所以我们在后续的循环的时候会继续再讲循环里怎么去使用它，那我们这节课就只是来认识它，要求去掌握它基本的原理常识。</p>
+<p><img src="/hugoweb/p/b015/jqh1.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jqh1_hu_4a81788c0c3f8fe2.png 480w, /hugoweb/p/b015/jqh1_hu_8636f042420b97d3.png 1024w"
+	loading="lazy"
+	
+		alt="很直观"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p>所以你要清楚这个前缀和后缀它处理的方法是不一样的，它不能等同于。</p>
+<p><img src="/hugoweb/p/b015/jqh2.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b015/jqh2_hu_8fd5f0c00ed1c083.png 480w, /hugoweb/p/b015/jqh2_hu_9747672466363eb0.png 1024w"
+	loading="lazy"
+	
+		alt="所以这个时候是很显而易见的啊"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>那么还有一个所谓前缀后缀递减，其实也是一样的。所以大家都知道啊，这递增递减是这么来的这么用的，这个很重要。</p>
+<p>那么在企业当中这个递增递减的作用应该尽可能的去避免，尤其是更复杂的语句中，不论是什么作业递增我们都尽可能的去避免它。因为它不清晰，你不知道他是先加还是后加能理解吗，不像大家想的那样，很复杂。假如说++value++，那到底是谁先加谁后加，那假如你这里再有一些其他的运算，像是++value * 5 ^ 6这种很容易把人搞蒙，所以在企业当中尽可能去避免++的这种写法。除非是用到循环里，我们后面会讲到循环的时候那些自增变量可能会用到，那除此之外呢可能定义数组的时候我们可能也会用到，但是在企业里尽可能不要去使用这种方法。</p>
+<h3 id="选修题外话">（选修）题外话
+</h3><p>就是考虑性能的考量的时候现在的编译器虽然说可以优化前缀和后缀的差异，但是实际上前缀递增和递减可能比后缀递增递减的性能更有效率。但是我们初期去考虑到如果我们的表达式过于复杂，你可能说它算数的比较多，我们尽可能的不要是用这种++的这种前缀和后缀的，会造成一些歧义的形式。因为我们后面马上会讲运算符的优先级，那我们有的时候可能带括号对吧，要是再算个加减乘除取模啥的，那我们就懵了。它到底是算完模之后再加还是先算完除法之后再加那这个就是我们很难去考量的。就是我们人的头脑的逻辑是很难去排查这些隐患的，所以我们要尽可能的去避免这样的隐患。而且++这种东西我们甚至可以不用。我们甚至可以value +  1这是最清晰的。</p>
+<p>所以说有一个说法就是选择前缀和后缀的形式是否基于要变量的旧值这个很重要啊。我们有一个术语叫做旧值，旧值的意思就是说原本的变量的值。那如果说我们本来不想去改变这个值的话，那我们可能就要去想办法去处理这些问题。所以我们就要考虑留下来旧值在后面会不会用，你像我们这个旧值在后面的时候就会用，能理解吗。</p>
+<h2 id="按位移位运算符">按位移位运算符
+</h2><p>说实话，按位移位运算符对于初学者来说对于基础的开发者来说其实不是特别常用，但是会有的。按位移位运算符这个东西它会在什么地方用到呢，大家都知道C语言当中咱们编程语言的能处理的是什么，是不是二进制。那么C语言里面提供了一个按位移位运算符它就用来处理二进制数据的。大家想一下，如果数据是一排一排的小方块，就代表着0或者是1，那么按位这个操作符是什么意思呢，就相当于是你要用一个操作符去发送命令，命令它是向左移动还是向右移动，指定的位置。它就是直接去操作一个二进制数，而且操作的是一个二进制数的位置。那么其中的有两个运算符，也就是&laquo;（左移位运算符，表示向左移动指定的位数，每个位向左移动，低位补零）和&raquo;（右移位运算符）</p>
+<p><img src="/hugoweb/p/b015/jyw1.png"
+	width="1919"
+	height="1080"
+	srcset="/hugoweb/p/b015/jyw1_hu_1396953fde961154.png 480w, /hugoweb/p/b015/jyw1_hu_e82393714f85e9df.png 1024w"
+	loading="lazy"
+	
+		alt="显而易见"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>注意我们这里定义的是<strong>uint</strong>类型，所以我们在企业里去用位移代码的时候一定要保证你的意图，特别是要注意符号位可能会溢出。我们这里单独还写了<strong>uint</strong>，因为确保他是无符号。</p>
+<p>那么还有一种情况就是会导致<strong>数据溢出</strong>，特别是左移。那么右移的现象你要考虑到有可能右移的时候这个数会变成有符号的。</p>
+<p>位移可以替代加减乘除的运算来<strong>优化性能</strong>，但是你要清楚你要位移的是个什么东西，这个东西是相当重要的。因为位移操作比乘除计算代价太小了，它不用来回转换，你就动它那些位置就行。你左移一位就相当于✕2你右移一位就相当于÷2，哎有人说我不信这个邪，看刚才的案例。它这个方法是不是比加减乘除要快，因为你要知道你算加减乘除的那个代价是很高的，相对于这个位操作来说这个操作确实是比较高，很显而易见了。</p>
+<p>那么我将带你编写一个程序啊，带你体验一下它的魅力。这个魅力了呢你们初学者估计不太能体现出来。我们少废话，直接上程序。</p>
+<p><img src="/hugoweb/p/b015/jyw2.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jyw2_hu_65510ef8106af5aa.png 480w, /hugoweb/p/b015/jyw2_hu_51213f84b50be968.png 1024w"
+	loading="lazy"
+	
+		alt="左移10位就相当于*1024"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b015/jyw3.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b015/jyw3_hu_2d9afc88c991cb66.png 480w, /hugoweb/p/b015/jyw3_hu_365c7ec14d9d5c77.png 1024w"
+	loading="lazy"
+	
+		alt="结果肯定是相同的不用看了，不是相同的我就不叭叭给你讲了"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<h2 id="按位移位的另外问题">按位移位的另外问题
+</h2><p>但是这有什么差别呢，有人说我看不出来有啥差别，很多人觉得这看起来这是妈的一样快啊，都他妈的一下就秒运行啊。我跟你讲啊这个位移它就是比乘法快，我来给你解释一下为嘛，我来给你解释一个概念，听好，有点难。那么在乘法运算呢，在底层硬件我们相乘的时候处理器去处理乘法运算要比加法的位移更复杂，因为它涉及多个步骤，它这个步骤不是像你想的那样，我把num转化为二进制然后就乘以1024的二进制，加减法是这样的但乘法不是。那么我们这里就要扩展一个概念叫做ALU，全称算术逻辑单元（Arithmetic Logic unit）。然后呢这个ALU就相当于是什么呢，在计算机这个CPU上处理器上，咱们今天讲的这个芯片就有意思了，就一个内部的一个关键的一个组件就是ALU，他是一个CPU的一个组件，名字叫ALU。（有人说我是在讲编译原理还是再讲操作系统）它去负责所有的算数运算包括加减乘除。当然还有一些，你比如说AND、OR、NOT、XOR就是我们后面会讲的逻辑运算符，它也是有的，就它也负责这一块，就是四则运算这一方面它也负责逻辑上的处理。就是CPU里呢它会有ALU这么一个东西的存在来去计算这些东西，那么这些东西就可以想象成一个大脑，它用来专门处理所有的数学和逻辑的问题。非常巧妙，这样一个芯片里面就有这样一个东西的。那么知道这个原理就好了，我们继续讲。乘法运算在底层硬件ALU当中是怎么去处理的，首先它要读取这个数，ALU是一个25一个是1024对吧，你想想它在里面会发生什么。但是它去做这个乘法的时候跟我们去做的不一样，跟我们想的不一样。处理器会检查1024的每一位就从最低位到最高位。就是加权法。</p>
+<h2 id="逻辑的真与假c关系运算符">逻辑的真与假、C关系运算符
+</h2><p>真在C语言当中我们用1去表示，假呢我们用0去表示，如果用bool类型去表达的话1就是ture0就是false</p>
+<h2 id="条件表达式运算符">条件表达式运算符
+</h2><p>xxx ? xxx : xxx</p>
+<p><img src="/hugoweb/p/b015/jyf1.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jyf1_hu_d59aea0c3a8d1ad1.png 480w, /hugoweb/p/b015/jyf1_hu_eb023083a620d36e.png 1024w"
+	loading="lazy"
+	
+		alt="案例"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b015/jyf2.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b015/jyf2_hu_c511b98ac6df167b.png 480w, /hugoweb/p/b015/jyf2_hu_ead735b9779c6907.png 1024w"
+	loading="lazy"
+	
+		alt="结果"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<h2 id="按位运算符">按位运算符
+</h2><h3 id="按位与运算符">按位“与”运算符&amp;
+</h3><p>我们现在定义有两个数啊，第一个数是a=12第二个数是b=25，那么12的二进制是110025的二进制是11001。那么按位与操作是什么意思，什么叫做按位与操作，这是一个判断符。它怎么去判断的呢，比较这两个二进制值。它怎么比较呢，从后往前按位比较，只有当两个同时为1才为1。那最后的结果呢就是1000，但是这个值呢是二进制值，转换为十进制是8。</p>
+<p><img src="/hugoweb/p/b015/jyf3.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jyf3_hu_1e21cb4ec475e406.png 480w, /hugoweb/p/b015/jyf3_hu_15b41088984db851.png 1024w"
+	loading="lazy"
+	
+		alt="&案例"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b015/jyf4.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b015/jyf4_hu_1ed382df4569762.png 480w, /hugoweb/p/b015/jyf4_hu_23a8ea148e8a90d4.png 1024w"
+	loading="lazy"
+	
+		alt="&结果"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>所以他这个就像刚才我们讲的一样。有人说，这C语言创始人他妈闲的蛋疼，他搞这玩意干什么，这玩意到底他妈有什么用，老师教这玩意到底是干什么用的。我跟你讲，这玩意可有大用了，这个用途跟嵌入式有关。这个按位与操作它可以将特定的位置设置为0，你比如说你想将12这个数它的第二位清零，你可以将12与与一个数相与，这样的话得到的结果就是零。你比如说我举个例子，我为了得到1000这个值，假设我有个数12，那我怎么用12这个数得到1000呢。我按位与啊，我用12跟25与一下得到的不就是一个1000嘛对不对。那同样的如果说我想将一个二进制数的第二位清零，把它变成零。你可以选一个数和它进行按位与操作。</p>
+<h3 id="按位与或">按位“与或”|
+</h3><p>有1为1，只要有1个就是1。</p>
+<h3 id="按位异或">按位“异或”^
+</h3><p>不同为1，0010 ^ 1010 的结果是 1000。只有1个值为0另一个值为1的情况才为1。</p>
+<p>翻转特定位：假如说我有一个数0010我想要1000这样一个结果，那我该怎么办。我翻转过来嘛，把它翻转过来，就是正的变成负的负的变成正的这种感觉。我该跟谁去异或呢1010，我用这个数把它进行翻转，非常巧妙。还有一个就是按位异或来交换两个变量的值</p>
+<h3 id="选修交换两个数的值">（选修）交换两个数的值
+</h3><p>我跟大家科普一个知识，你们当时学变量的时候老师经常会让你去交换两个数的值，他们的代码是这样写的，假如说我们定义一个int a = 1 , b = 2;</p>
+<blockquote>
+<p>①temp = a;</p>
+<p>a = b;</p>
+<p>b = remp;</p></blockquote>
+<p>或者</p>
+<blockquote>
+<p>②a = a + b;</p>
+<p>b = a - b;</p>
+<p>a = a  - b;</p>
+<p>这种是通过算数交换的，这个操作其实是比较麻烦的，因为进行了3次计算。</p></blockquote>
+<p>所以很多人就觉得这种方法好骚啊，好牛逼啊，我告诉你，狗屁。你进行了3次运算你知道吗，你让CPU运行了3次，而你赋值的个操作你只是让内存开辟了一块额外的空间你只是定义了一个变量而已，你没有让计算机去运算。大家想一想，你开辟一块内存空间和让计算机去运算你想哪个值。当然这也取决于变化对不对，那我们这里经典显然这个案例，最经典的还是temp交换。但是我告诉你还有一种更骚的操作，就是我们今天要讲的通过按位异或符</p>
+<blockquote>
+<p>③a = a ^ b;</p>
+<p>b = a ^ b;</p>
+<p>a = a ^ b;</p></blockquote>
+<p>很显而易见了，通过这种方式呢它就大大缩短了第二种方法的计算量，它就可以直接二进制计算，不用在转化为二进制。当然其实这个效果是一样的，看起来好像也没快多少。所以交换变量这个事我自己觉得还是temp比较好一点，就真正意义上temp啊。所以从这个角度来看的话我们不要去刻意的去做刻意的去处理这个事情，来去搞得好像大家都是很骚操作啊很怎么样，其实不是这样，如果我们重视内存的话，我们不想开辟额外的内存空间，那或许用牺牲运算的速度来去换去一定的空间或者是牺牲空间来换取一定的运算速度它是这样一个决策。这是我们说多了，就是说它是这样一个操作。②和③是原理是一样的。</p>
+<p>那么还有一个就是两个值交换按位异或我讲实话真的就是不太划算，因为我们定义一个变量两个值交换其实际上也就是开辟了一块四字节的空间，那四字节对于内存来说几个G卧槽那算个屁卧槽。</p>
+<p>来我们继续说，检测不同。我们可以按位异或来去检测哎这两个数到底哪个地方是不同的，那这样的话我们可以对比起来啊，它是一个相当重要的观念啊。</p>
+<h2 id="按位取反">按位取反~
+</h2><p>把所有的0变成1把所有的1变成0</p>
+<p>假如说我这里是00001100，按位取反后就是11110011就这么简单。</p>
+<p>应用场景的话，按位取反符在掩码翻转也是很有用的，有的时候会有用。</p>
+<h3 id="题外话">题外话
+</h3><p>这与之前讲的按位移位运算符不一样，按位移位运算符是应用与计算，这个是应用与判断，然后用于调控开关，然后呢运算符里面非常难的我们都已经讲完了，学到这你应该叹口气了啊，所有运算符里最难的东西我们都已经讲完了啊。还剩下一个逻辑运算符，逻辑运算符的话更简单。</p>
+<h2 id="选修待完善掩码与电路遥控led灯练习">（选修.待完善）掩码与电路遥控LED灯练习
+</h2><p>那这个时候我们就要用到超纲的知识了，C语言里其实是没有二进制输出的，但是我们可以自己写一个啊，没错自己写一个。这一块是超纲的知识，你可学可不学，你只需要照葫芦画瓢照着写然后看我怎么用就行了。至于为什么我们后面再去讲，因为这个已经超纲了，超纲了好几章。你就照葫芦画瓢就行了，我怎么写你就怎么写，等到后面的是收你自然会知道这是什么，相信我。</p>
+<p><img src="/hugoweb/p/b015/jyd1.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jyd1_hu_9638d2f768eea156.png 480w, /hugoweb/p/b015/jyd1_hu_338a15bc4fe9f541.png 1024w"
+	loading="lazy"
+	
+		alt="照葫芦画瓢去写一遍"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<h2 id="c逻辑运算符">C逻辑运算符
+</h2><p>这个逻辑运算符真的没什么好讲的，说白了这个逻辑运算符啊，两个and（&amp;&amp;）两个or（||）。它就相当于什么呢，哎，左边的和右边的一比，它也是对比的关系。这两个假如说都为1，那么整个东西就是1，这是and。或的话就不一样了，只要有一个是1，那么整个这个都是1。</p>
+<h2 id="逗号运算符">逗号运算符
+</h2><p>这个运算符其实在后期的for语句当中使用的，就是我们会学到循环的时候会使用的比较多，一般情况下使用的还真不多。我们就简单的写一些小案例啊，就让大家体会一下，就没有什么实际意义，这个程序没有实际意义。但是大家记住只要有意义的程序和变量我肯定写的去规范，不用大家去提醒。</p>
+<p><img src="/hugoweb/p/b015/jdh1.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jdh1_hu_e5d8383585e546c6.png 480w, /hugoweb/p/b015/jdh1_hu_a0ce072fee62787.png 1024w"
+	loading="lazy"
+	
+		alt="案例"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p><img src="/hugoweb/p/b015/jdh2.png"
+	width="960"
+	height="480"
+	srcset="/hugoweb/p/b015/jdh2_hu_2ef92d10f6af94d3.png 480w, /hugoweb/p/b015/jdh2_hu_97fcbb9e5daf6166.png 1024w"
+	loading="lazy"
+	
+		alt="这个result = 4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>逗号运算符它指什么，这些东西它都会执行。但是最后用逗号赋值运算符的它只会复制最后一次表达式的计算，也就是说，在一行内执行多个表达式，就逗号运算符么它可以在一行里边是吧，一行代码里边执行多个东西，这三个它们都执行没错啊，我们可以看到效果都执行，但是呢它作为一个整体作为一个右值赋值给左值的时候，它只赋值给什么？哎对啦，它只赋值最后一次表达式的计算，也就是最后一个逗号后边的东西，也就是c += 3。就是不管中间有多少它照样都执行没错，但是它作为一个整体右值赋值给一个变来给你的时候它只运算最后一个，就是最后一个逗号后面这个东西返回给它。前面的东西照常进行但是不会加一起赋值给它，所以这个是逗号运算符。</p>
+<h3 id="选修-1">（选修）
+</h3><p>我可以这么讲，就是这个逗号运算符尽可能谨慎使用，甚至不要去使用，甚至不要去在企业里去使用这种。除非你有明确的要求，而且要有明确的注释写的很清楚你在干什么。避免去使用它，因为它的可读性比较差，而这只是其中的一种最简单的用途，那么还有一种用途就是在咱们的for语句循环里了对吧，我们后面会讲。现在你可以不用学，现在你只需要看我装逼就行，说句不好听的就是这样的，因为你现在不理解是什么意思。你比方说我举个例子啊，假如说你们老师喜欢定义i和j是吧，那我们就写你能看懂的，有的人能看懂。</p>
+<p><img src="/hugoweb/p/b015/jdh3.png"
+	width="1879"
+	height="773"
+	srcset="/hugoweb/p/b015/jdh3_hu_7638349d97c7f48c.png 480w, /hugoweb/p/b015/jdh3_hu_37b257004e1528fb.png 1024w"
+	loading="lazy"
+	
+		alt="他们有这种操作是吧，乱七八糟的，反正就是让你绕着让你看不懂就对了"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="583px"
+	
+></p>
+<p>就是意思就是说我们学到for循环的时候我们这里用到两个逗号，看到没有。它会用到啊，但是只是我们这里不作为重点，因为我现在就告诉你这个东西就可以了。不用你去掌握，后面学到循环的时候你自然会知道这是什么。</p>
+<h3 id="开骂">(开骂)
+</h3><p>所以大家不要担心啊，所以你们看了之后总有那么一两点没听明白的很正常啊。你要都能听明白卧槽，我他妈的还做这课程干什么是吧。你不可能都听明白，不能听明白很正常，要么自己去线下这个看完之后自己去搜索一下思考一下，要么就是继续往下面看，很有可能我后面就会讲。所以你有可能看不明白那很有可能我到后面就会讲哦，这是很正常的啊。你包括我到现在都没有讲scanf，为什么，哎，后面会讲。现在讲起来它太复杂了，不像大家想的那样，我们后面会说一下啊，OK就是这样。</p>
+<h2 id="计算的优先级和顺序">计算的优先级和顺序
+</h2><p>那么这个文档呢都他妈的给我去微软文档里去搜，就搜C语言。就这个文档啊那么别整那些没用的考试，就是真的想不起来了，你就看这个文档就行了。关于运算符的所有优先级这个文档是非常的权威，我就不多说了就是运算符的优先级问题。</p>
+<h3 id="为什么加号减号一元的运算符比二元的优先级高">为什么加号减号一元的运算符比二元的优先级高
+</h3><p>这有一种术语叫解引号，你就可以理解成负号。</p>
+<h2 id="表达式">表达式
+</h2><p>表达式其实我们在最初的时候提过一嘴，所以表达式相当于一个运算的对象，可以理解为常量和变量然后组合进行计算，然后组成的一个东西叫做表达式。</p>
+<p>每一个表达式都有一个值，这个很重要。要想获得这个值，必须根据运算符优先级的顺序来进行操作。</p>
+<h2 id="复合语句">复合语句
+</h2><p>就是一个大括号括起来，可以有好多好多条语句，那就叫程序块、代码块、符合块，你可以这么理解吧。这就是复合语句，妈的没别的了。</p>
+<h2 id="类型转换">类型转换
+</h2><p>我跟大家讲，这个东西它重要吗？我这么跟你讲，等你出现问题的时候你就去翻微软文档，有关于转换问题你好好去看这个文档。这个根本就讲不完，这个东西是没有办法去讲的，就是我们之前讲的那个类型转换其实已经很细了。他这个是更细，就是细到精致啊。这个文档一直都是最新的，你不用担心它会不会过时。</p>
+<h2 id="第三章结束语">第三章结束语
+</h2><p>主要是你要去思考去练习，就是讲的好的代码有案例的，你至少得敲个十来遍是吧。你敲的时候还要去想我为什么这么写，我写这个的时候我干了什么，我提醒大家要干什么，你要这样去想。不然的话你的训练度不够的知道吧。你训练度不够你还以为你没做题反而怪我，这不能怪我。</p>
+<p>当然做题也是一种训练了，之前我就跟大家说了做题也是一种训练，但这个训练效果可能不是那么明显，我给你举个例子。比如说你做题了，你做了这些题你把他更正完了，假如说让你做一个改错题，你把错误改成正确的，你要把这个正确的输入再打一遍再敲一遍再运行一遍跑一遍你才有这个结果。你再看看那个错的结果为什么会错，你就发现你做题的时候跟别人做的不一样，别人是只是选对答案，只是走了个考试这个过场。但是你是真真切切知道这个错误在哪，你知道你在编程的时候不要这样去写。</p>
+<p>那么我建议你们在写题的时候也尽可能要注意啊，这个变量名的规范命名，这个也是没有办法的。我为什么做这些就是为了弥补教育上的缺陷，你不要看我，你跑到国外你都看不到我这样的课程。我就这么跟你讲，你看那哈佛大学录制的什么🐶屁东西，你去看看就知道了啊。不是我说我贬低哈佛大学，那确实哈佛大学是🐂，但是它教学这个东西确实不行，实话实说啊。你把它翻译成中文我觉得没我这个看的爽，我就可以这么讲。</p>
+<p>现在的老师丢失了本质，当然也有些老师确实很好啊，真的是秉承教育的革新啊。这种很少，几乎是没有的，大部分都是在坐吃等死，大学里就是一套教材一套方案用了几十年都不会变的。这个没有办法，教育的本事的制度不改变那其他东西也不会去改变。</p>
+<p>还有一方面就是教师还是太吃香了，说句不好听的混吃等死的人全部都跑到教学里，全部都混到教学楼里了。那真正有才能的人为什么要留在大学里呢对不对，那它有本事去挣钱有本事去做很多事情的时候他就不会继续留在大学里，它就会去到企业里，去到社会里去做一些有意义的东西，他不会去留在大学里。那马云如果当时留在大学里教英语那估计也不会有淘宝也不会有阿里巴巴。</p>
+<p>同样的道理，这个社会有能力的人，我可以这么讲，不会特别多的留在大学里，除非是那种做学术界特别牛的那种人。但那种人他做学术很牛，但他不适合教学。有很多人你们发现就是这些名校他有的时候他教学不是特别好，不是因为他大学不狗好，而是因为那些特别牛的名校那些教授其实他主要的目的不是为了教学，他是为了自己的学术研究。因为他留在大学里他教书的时候学校会给他钱，就相当于是铁饭碗了。给他一定的月薪让他去研究东西，然后呢他借助学校的名誉可以拉拢一些有钱人赞助。赞助的一些项目或者是启动资金，他可以研究他自己喜欢的领域和学术代表。但是对教育的革新我可以说就是0。你不要觉得我说的很夸张，就是这样的。哪怕是世界级的名校都是这样的，很少有人在教学上做革新，几乎没有。</p>
+<p>我可以这么讲，中国大多数计算机的教育有一半至少是中国培训机构的功劳。我是第一次这么夸培训机构，我基本是跟培训机构场反调的。因为培训机构为了赚钱，这两年实在是不干人事啊。就是说你宣传那些流行的东西你会发现最后会成为你的职业瓶颈。因为学生太过于关注流行的东西二不关注于核心的内容，他们只关注半年怎么把一个人训练到岗位上但是没有确切实际的职业生长职业攀岩的计划或者说所谓的规划。你作为自己来说你没有提升的可能，因为你上学的时候就通过培训机构你不知道这背后的原理，内存背后的原理你不懂这些东西，你没有经历过编译原理这些课程，你什么都没有学过你就会有所欠缺，你只是天天是一个拧螺丝就是打工的人。说白了就是我培训只让你去拧螺丝，但是没有告诉你这背后蓝图的设计，这些东西你是没有学到的，你再短短的时间里是不可能学到的。</p>
+<p>那么我可以告诉你的是你在大学里就能学到吗？这个也不一定。但是大学至少会给你一个好的环境让你去学习。那么不好的大学就没有好的环境，就是垃圾啥也不是，就是教学也不行然后教授呢本身也没有什么学术研究了，他可能自己都不碰学术的，就是大学里混吃等死的，尤其是职业院校。并不是说喷职业院校，而是说职业院校也有好的教师这一点我们不可否认。你包括像十几年前C语言视频有一个叫做郝斌的一个职业院校的一位教师做的，这个做的还可以，说句实在话还可以。但是那个时候有人做这样的课程我觉得已经是相当了不起了，我实打实的去尊敬。不过到这个时代的时候啊，随着这个时代的发展呢我们要认识到有些东西它确实是有所欠缺。那么郝斌后来去哪了，是不是退休了我也不知道啊，可能他现在还没退休是吧，有可能就不做了也有可能。但是我们站出来就可说是最好的了，目前这个时代可以这么去理解。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/hugoweb/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+            <a href="/hugoweb/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b017/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b017/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91JavaScript-%E4%BB%A3%E7%A0%81.ac5b38e46443c78d0b74ae09f38b8540_hu_a736304c1f4a99ec.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第五章」"
+                        data-key="b017" 
+                        data-hash="md5-rFs45GRDx40LdK4J84uFQA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第五章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b016/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b016/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E4%BB%A3%E7%A0%81-%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%94%B5%E8%84%91.a15c9d4dd48986974acd43e8b722350d_hu_6fd6a84142b1fa68.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第四章」"
+                        data-key="b016" 
+                        data-hash="md5-oVydTdSJhpdKzUPotyI1DQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第四章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b013/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b013/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E4%BB%A3%E7%A0%81-%E5%88%9B%E6%84%8F%E7%BC%96%E7%A0%81.340073609f2013b6c47db1afad6091c5_hu_dae13445b72bf74e.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第一章」"
+                        data-key="b013" 
+                        data-hash="md5-NABzYJ8gE7bEfbGvrWCRxQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第一章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b014/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b014/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91Linux-%E5%8D%A1%E5%B8%83%E5%A5%87%E8%BE%9B.4abc85107a790456b5101100ed4497c4_hu_4748a85603795bd1.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第二章」"
+                        data-key="b014" 
+                        data-hash="md5-SryFEHp5BFa1EBEA7USXxA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第二章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b004/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b004/c.2f7a1af9afce7366559744171b0ccb18_hu_56b1976f520ac92f.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【教程】VS环境搭建"
+                        data-key="b004" 
+                        data-hash="md5-L3oa&#43;a/Oc2ZVl0QXGwzLGA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【教程】VS环境搭建</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 空气炸锅中-Skye
+    </section>
+    
+    <section class="powerby">
+        
+            说不出口的话，成了心中的刀 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugoweb/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    @font-face {
+        font-family: 'Regular';
+        src: url(https://airmuamua.github.io/hugoweb/font/Regular.ttf) format('truetype');
+    }
+
+    :root {
+        --base-font-family: 'Regular';
+        --code-font-family: 'Regular';
+    }
+</style>
+
+<style>
+    #TableOfContents>ul,
+    ol {
+
+        ul,
+        ol {
+            display: none;
+        }
+
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function () {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://airmuamua.github.io/hugoweb/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+    </body>
+</html>

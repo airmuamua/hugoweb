@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="体验C编程的创新之旅-5">
+<title>【C/C&#43;&#43;】C语言「第五章」</title>
+
+<link rel='canonical' href='https://airmuamua.github.io/hugoweb/p/b017/'>
+
+<link rel="stylesheet" href="/hugoweb/scss/style.min.902578b43aaf1ca6f57d0aaa5332a3acc6057195765cc77648a43fa545df29ec.css"><meta property='og:title' content="【C/C++】C语言「第五章」">
+<meta property='og:description' content="体验C编程的创新之旅-5">
+<meta property='og:url' content='https://airmuamua.github.io/hugoweb/p/b017/'>
+<meta property='og:site_name' content='Skye'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='教程' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:published_time' content='2025-08-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://airmuamua.github.io/hugoweb/p/b017/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91JavaScript-%E4%BB%A3%E7%A0%81.png' />
+<meta name="twitter:title" content="【C/C++】C语言「第五章」">
+<meta name="twitter:description" content="体验C编程的创新之旅-5"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://airmuamua.github.io/hugoweb/p/b017/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91JavaScript-%E4%BB%A3%E7%A0%81.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugoweb/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/hugoweb/img/avatar_hu_21e8d998ffcce10.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">☁️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugoweb">Skye</a></h1>
+            <h2 class="site-description">空气炸锅中</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/airmuamua'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugoweb/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>档案</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugoweb/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#循环在生活上的作用">循环在生活上的作用</a></li>
+    <li><a href="#循环开始之前的意识问题">循环开始之前的意识问题</a></li>
+    <li><a href="#初探while循环">初探while循环</a></li>
+    <li><a href="#自动贩卖机案例">★自动贩卖机案例</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/hugoweb/p/b017/">
+                <img src="/hugoweb/p/b017/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91JavaScript-%E4%BB%A3%E7%A0%81_hu_7be00cf3578872a9.png"
+                        srcset="/hugoweb/p/b017/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91JavaScript-%E4%BB%A3%E7%A0%81_hu_7be00cf3578872a9.png 800w, /hugoweb/p/b017/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91JavaScript-%E4%BB%A3%E7%A0%81_hu_1c9ec258d0286ebc.png 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第五章」" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/hugoweb/categories/%E5%8F%AF%E8%83%BD%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84%E7%AC%94%E8%AE%B0/" style="background-color: #3CB371; color: #fff;">
+                可能会用到的笔记
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugoweb/p/b017/">【C/C&#43;&#43;】C语言「第五章」</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            体验C编程的创新之旅-5
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 14, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="第五章">第五章
+</h1><h2 id="循环在生活上的作用">循环在生活上的作用
+</h2><p>这一章主要的内容就是研究透彻循环。那程序这个设计逻辑，这个循环呢，也是非常有意思的一个环节。很多人觉得他没意思，没意思是因为你学校教的不好。循环这个东西，我跟你讲，他就有点像咱们这个操场上去跑步。那在操场这个开头呢其实也是个结尾，对吧。那假如说我要跑十圈，那你说你说你作为一个人来说，你怎么去跑。从跑道上，任意一个位置作为起点开始，跑第一圈，作为一个计次。那再跑一圈，是不是记两次，什么时候会结束，第十圈。所以一个循环按照逻辑来说有什么？</p>
+<p>一、它有一个<strong>开始</strong>，二、还有一个计数。那不然没有计数，我操，假如说你这里跑第一圈啊，老师罚你跑步跑第一圈。跑第一圈之后，老师说我没看见，你跑到第二圈，老师说我还没看见，你再跑，那你这肯定就不玩了。那你这不是找事么。</p>
+<p>所以循环一定要计数的，必须得保证能够计数。不能计数，我没有办法去判断他是不是已经跑了多少圈，也没办法达到目的，对不对。我到底跑了几圈，我没有目的，我也没有计算数据。所以呢，循环要有一个开始，要有一个计数。</p>
+<p>第三个就是什么时候跳出循环，说白了就是<strong>结束</strong>。那么在结束之前呢，大家想一想。<strong>开始、计数、结束</strong>，我这整个这么样一个东西它是不是相当于就是一个循环系统。它就是一个循环嘛。</p>
+<p>你假如说我就操场跑10圈，那么开始我刚才跟大家讲了。要有一个起点，对不对。从哪个地方开始？从这个地方开始，它必须要有一个开始。第二个它必须要有一个计数，第三个它必须要有一个结束。结束就是跑10圈啊，我跑10圈就可以结束了。那么这个循环的内容是什么呢，循环的内容就是跑步。</p>
+<p>所以从这个角度来说的话，这三个是在为谁服务的？为循环的内容。就是我循环的目的，我要去做到，我循环到底为了什么，我为了跑10圈，对不对。它有一个内容，九圈七圈它是一个内容，就是我到底要循环什么？我循环去跑步没错吧？这个逻辑循环去跑，这里就是循环的内容，这个很重要啊，这个只要这点懂了，这一章基本就结束了。</p>
+<p>那么程序设计为什么要有循环呢？显而易见的啊。你比如说我们要打印数字，那么从1~100。那我们难道要写100个printf()吗，可能吗？</p>
+<p>所以从理论上来说，循环的作用，一、<strong>避免重复，提高效率</strong>。第二种是什么呢，如果我们要<strong>处理大批量的数据</strong>，</p>
+<p>比如说记录一些用户输入了什么东西，你按下键盘你滚动键盘你QWER4个键一起按，技能一起按，我得记录一下你按了什么技能啊。这个记录是不是我记录一个键，记录两个键，记录3个键，记住4个键，我记录100个键，记录1万个键，记录你按下的每一个键。被记录进去，他是不是也需要一个循环。不停的要去记录，你去到底输入了什么东西，包括我们在记事本上去打字，那么同样的，它也是一个循环，我们要不停的去记录。所以我们在打字的时候，其实实际上它也是一个循环程序。</p>
+<p>第二个，循环的作用。<strong>处理大量内容</strong>。刚才我们说了，跑十圈其实是一个大量的内容。跑100圈，跑1万圈，它都是一个大量的内容，循环就可以处理大量的内容。</p>
+<p>第三个。循环它的特点是什么？它根据条件的不同执行不同的次数。不同记次。说白了就是我要求他条件不一样。</p>
+<p>你比如说我去饭店里面去点饭，点菜。根据客人的需求呢，厨师可以决定炒多少盘菜，每盘菜炒多久。</p>
+<p>所以他就有一个什么呢，<strong>灵活控制行为</strong>。灵活控制程序的行为，第三步它有点像if了，有点有点这种感觉了。只不过这个衣服if一直在去判断他能不能去。</p>
+<p>你比如说客户要求。每一盘菜都要炒10分钟，第一盘菜炒10分钟，第二盘菜炒10分钟，第三盘再炒10分钟。它是有一定的控制的，对吧。那么下一个客户来的时候呢，他要求变了20分钟，哎，有这个感觉。</p>
+<p>所以我们要知道程序设计为什么要有循环这三大点啊，一个是<strong>避免代码重复</strong>，第二个是<strong>处理大量数据</strong>，第三个是可以<strong>控制灵活的行为</strong>。</p>
+<p>循环的三个作用：</p>
+<ul>
+<li>执行重复的任务</li>
+<li>检查机制</li>
+<li>简化代码</li>
+</ul>
+<p>所以我们现在已经知道，对于我们在程序当中的循环，实际上他应该会有一个过程。这个过程是在生活上去理解循环有一个步骤。那么在程序当中他的理解是这样的，它有这样一个过程，这个过程相当重要。</p>
+<h2 id="循环开始之前的意识问题">循环开始之前的意识问题
+</h2><p>遇到循环大家不要害怕啊，就是说我会带着大家去训练啊，除了我们课堂上所讲的这些内容，我们这个循环当中的每一个案例。我希望大家每一个程序能上手个10遍啊，20遍其实都不过分啊，主要是我们在训练。哪怕你每一个训练休息个10分钟。一定一定要这样做，一定一定要记下来啊，就是说，笔画一画，在纸和笔本子上画一画，注释写一写，逻辑写一写，一定要确保训练当中的每一个内容你都能够完全的掌握。不是把代码背下来，而是你完全的能够掌握，而是你完全的能够凭借一个东西，你就马上能写，就是能想出来，能写出来一个程序。差不多在20分钟之内，半小时之内，你能写的差不多，甚至更快都有可能。我觉得这样就OK，如果不够的话，你就限制时间，让自己去训练一下，理解，训练，这是本章节最重要的内容，一定确保要理解while循环for循环的各种各样的内容。</p>
+<p>好就是这样啊，我希望大家能够做足充分的准备训练啊，千万要记得，不是只理解了就完事了啊。这一章的内容就是这样，就是一定要充足训练。当然，以后的也是这样，一定要充足的训练才能确保你掌握这样的内容。这确实是啊，那就这样好吧。那我也希望就是你学到这个章节，如果你跟学校是同步的话，那你也可以去做一做网上的一些练习，可能有一些练习比较难啊。觉得你没学到那就无所谓，就是你觉得跟循环有关系的练习啊。可以找一找，可以看一看，练习一下，说不定会有提高啊。但是你说你学校的那些选择题目其实无非就是语法上刁难你对吧，什么i++i&ndash;的对吧，无非就是这些东西刁难你对吧，其实实际上它就是语法上挖坑这个对吧。这个是有的啊，这种坑一般都是新手容易犯错误，逻辑上不严谨啊。这个也是需要训练啊，慢慢去摸索这个路肯定就铺的很快。但是有的学校一上来就到到这章就开始讲数学讲算法，这个我觉得有一点不太妥。除非你要把这个事情讲的很清楚，为什么要有这个东西。不然的话，别人就以为纯粹的coding就是数学啊，那这个就没意思了，纯粹的coding就是算那就没有意思。因为coding不只是算法的数学，数学和算法只是起到一个其中的作用而已，仅仅一个小作用。我们在后面的部分，大家可以轻松的体会到我的教学跟别人不一样的感觉，我将变成艺术。</p>
+<p>当然了，有的数学知识可能我会稍微强调一下。不会太有，几乎都是带着大家去分析逻辑，一步一步的推敲。为什么要加1，为什么要减1，像这样一步一步去推敲。这个我也是有感触，因为像中国大陆的数学的教育，应试教育特别厉害啊。那这个这个风格这个style都带到Computer science领域内了，我觉得这个是不应该的。因为你像在北美教数学，大家注重的是推理，这个很重要。就是教授一定会教你推理，到底是怎么来的，这个东西有什么用处，一定会告诉你。如果他没有告诉你，可以直接去问他，课堂上直接就打断他，这是不一样，对吧。这个环境咱就不多说了，反正就是这个样子。</p>
+<p>我们能做的就是，知识呈现给你，那命给掌握在你的手里。</p>
+<h2 id="初探while循环">初探while循环
+</h2><p>我们这里简单的介绍第一个循环，while的使用方法。那么while非常简单，你比如比如说我现在我要去跑步。</p>
+<p><img src="/hugoweb/p/b017/jwh1.png"
+	width="1919"
+	height="1080"
+	srcset="/hugoweb/p/b017/jwh1_hu_6773428ad29357e7.png 480w, /hugoweb/p/b017/jwh1_hu_4d1282c984e58937.png 1024w"
+	loading="lazy"
+	
+		alt="跑圈案例"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>总结，循环第一步要初始化数据。什么叫初始化呢？首先，第一，我要循环，什么时候会结束？它的目的，它的目标是什么。我们的总圈数是不是10，这就是它结束的一个目标。我们叫结束的目标。还有一个是什么？初始化跑的数据有初始条件。我们从零开始，这就叫初始条件。对吧，这就相当于你打怪升级一样，你第一次就有一级嘛，对不对，我打到100级，那初始的等级就是100级，刚出新手村肯定一级对不对。这10就相当于你要打那个目标。这也类似于厨师做菜之前要准备好所有的食材和调料。初始化，然后就会有一个循环的条件判断。这个条件判断的是什么？什么时候执行，什么时候才会一直跑。一个厨师如果做菜的时候菜没熟，他是不是要一直炒一直炒一直炒。那这一步就相当于判断什么，判断他什么时候，最后这个条件。注意它跟if一样，这个条件为true的时候，他才会去执行代码，叫做执行循环体。也就是说，这个条件只要为true，就必须执行循环体。所以当我们跑的圈数不够的时候，我们就要继续一直跑。你跑的不够啊，你要继续跑。你这个菜没做熟，你要继续炒。那么while里边这个条件就是这样的，当这个条件为true的时候，它就会触发循环。除非什么时候结束，除非这个条件为false。除非while这里边的条件为false的时候，我们才不会去继续跑下去。</p>
+<ul>
+<li>初始化</li>
+<li>条件判断</li>
+<li>循环体</li>
+<li>迭代</li>
+<li>终止条件</li>
+</ul>
+<p>这五个东西相当重要，如果没有这五个东西，就构不成一个循环体。只要少了一个，就构不成一个正常的循环。</p>
+<h2 id="自动贩卖机案例">★自动贩卖机案例
+</h2>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/hugoweb/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+            <a href="/hugoweb/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b016/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b016/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E4%BB%A3%E7%A0%81-%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%94%B5%E8%84%91.a15c9d4dd48986974acd43e8b722350d_hu_6fd6a84142b1fa68.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第四章」"
+                        data-key="b016" 
+                        data-hash="md5-oVydTdSJhpdKzUPotyI1DQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第四章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b015/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b015/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89-%E7%AE%80%E5%8D%95%E7%9A%84%E8%83%8C%E6%99%AF.695895bdad2ecd97a7ea822de1303472_hu_5a94e515a80285a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第三章」"
+                        data-key="b015" 
+                        data-hash="md5-aViVva0uzZen6oIt4TA0cg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第三章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b013/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b013/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E4%BB%A3%E7%A0%81-%E5%88%9B%E6%84%8F%E7%BC%96%E7%A0%81.340073609f2013b6c47db1afad6091c5_hu_dae13445b72bf74e.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第一章」"
+                        data-key="b013" 
+                        data-hash="md5-NABzYJ8gE7bEfbGvrWCRxQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第一章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b014/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b014/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91Linux-%E5%8D%A1%E5%B8%83%E5%A5%87%E8%BE%9B.4abc85107a790456b5101100ed4497c4_hu_4748a85603795bd1.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【C/C&#43;&#43;】C语言「第二章」"
+                        data-key="b014" 
+                        data-hash="md5-SryFEHp5BFa1EBEA7USXxA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【C/C&#43;&#43;】C语言「第二章」</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugoweb/p/b004/">
+        
+        
+            <div class="article-image">
+                <img src="/hugoweb/p/b004/c.2f7a1af9afce7366559744171b0ccb18_hu_56b1976f520ac92f.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【教程】VS环境搭建"
+                        data-key="b004" 
+                        data-hash="md5-L3oa&#43;a/Oc2ZVl0QXGwzLGA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【教程】VS环境搭建</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 空气炸锅中-Skye
+    </section>
+    
+    <section class="powerby">
+        
+            说不出口的话，成了心中的刀 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugoweb/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    @font-face {
+        font-family: 'Regular';
+        src: url(https://airmuamua.github.io/hugoweb/font/Regular.ttf) format('truetype');
+    }
+
+    :root {
+        --base-font-family: 'Regular';
+        --code-font-family: 'Regular';
+    }
+</style>
+
+<style>
+    #TableOfContents>ul,
+    ol {
+
+        ul,
+        ol {
+            display: none;
+        }
+
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function () {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+                openUl.forEach((ul) => {
+                    ul.classList.remove("open")
+                })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://airmuamua.github.io/hugoweb/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+    </body>
+</html>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>学习 on Skye</title>
+        <link>https://airmuamua.github.io/hugoweb/tags/%E5%AD%A6%E4%B9%A0/</link>
+        <description>Recent content in 学习 on Skye</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>空气炸锅中-Skye</copyright>
+        <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://airmuamua.github.io/hugoweb/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Web】Web开发-B/S架构</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b023/</link>
+        <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b023/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%8F%E5%A4%A9%E6%A3%AE%E6%9E%97-%E5%A4%A7%E6%A0%91%E4%BB%B0%E6%8B%8D.png" alt="Featured image of post 【Web】Web开发-B/S架构" /&gt;&lt;h1 id=&#34;web开发通识课-bs架构软件&#34;&gt;Web开发通识课-B/S架构软件
+&lt;/h1&gt;&lt;h2 id=&#34;简言&#34;&gt;简言
+&lt;/h2&gt;&lt;p&gt;现在我们来讲BS架构的预备课，这预备课的主要内容是告诉大家软件的世界不仅仅还CS架构还有BS架构。&lt;/p&gt;
+&lt;p&gt;我们所说的开发Web项目，开发Web应用指的是什么——其实就是BS架构的软件&lt;/p&gt;
+&lt;p&gt;那么BS架构软件究竟意味着什么，哎，我们这个课要讲一下BS架构软件发展的历程，现在的状况以及未来的展望。这都是我们要考虑的问题。&lt;/p&gt;
+&lt;p&gt;我们这个课程不求就是说让你去追踪一语言，或者说追踪一个学习路径，没有这样的东西。学完这门课程你会发现这样东西都弱爆了。&lt;/p&gt;
+&lt;p&gt;你看完这门课你基本上，我不敢说能什么怎么怎么样哈，但是至少比你在市面上看到那些书，不管是看到博客还是其他也好，几乎是没有人能提及的这些东西。&lt;/p&gt;
+&lt;p&gt;我们这个课程主要说B/S架构是怎么开发，C/S架构不是我们的重点，因为C/S架构现在职位不是很多，基本上很少有人做C/S架构的软件。&lt;/p&gt;
+&lt;p&gt;而且我们现在都知道，就是我们会考虑到跨平台的问题，我们会给大家强调。就是说很多很多的应用程序都可以做跨平台应用，我们做B/S架构的时候其实实际上也是相当于把C/S架构做完了。我们之后会给大家再提到这个问题。&lt;/p&gt;
+&lt;p&gt;那么这里再给大家去复习一下，我们之前学的内容。比如说C/S架构的软件&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【Web】Web开发-C/S架构</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b024/</link>
+        <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b024/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%8F%E5%A4%A9%E6%A3%AE%E6%9E%97-%E5%A4%A7%E6%A0%91%E4%BB%B0%E6%8B%8D.png" alt="Featured image of post 【Web】Web开发-C/S架构" /&gt;&lt;h1 id=&#34;web开发通识课-cs架构软件&#34;&gt;Web开发通识课-C/S架构软件
+&lt;/h1&gt;&lt;h2 id=&#34;cs-架构软件&#34;&gt;C/S 架构软件
+&lt;/h2&gt;&lt;p&gt;C/S 架构软件是什么意思？&lt;/p&gt;
+&lt;p&gt;client 客户端 需要下载 安装（QQ、微信、英雄联盟）&lt;/p&gt;
+&lt;p&gt;server 服务端（QQ账号、iD账号、身份证、密码）&lt;/p&gt;
+&lt;p&gt;C呢就相当于是客户端，S呢就相当于是服务端。&lt;/p&gt;
+&lt;p&gt;这什么意思呢？什么叫客户端和服务端呢？&lt;/p&gt;
+&lt;p&gt;很简单，你只需要打开**《英雄联盟》**，就明白我这个意思了。打开一个游戏就没白的的意思了，或者说打开微信就明白了，这叫C/S架构软件。&lt;/p&gt;
+&lt;p&gt;你比如说你在电脑上登录微信，它就属于叫C/S 架构软件，啥意思呢？&lt;/p&gt;
+&lt;p&gt;就是用户必须要下载这个软件，去安装。你们都从网上下载过软件嘛，下载——安装——下一步——下一步——下一步——安装成功，是吧，开始使用对吧。&lt;/p&gt;
+&lt;p&gt;需要下载，要安装才能使用，这是客户端。最简单就是QQ、微信或者说是英雄联盟这种，这都是客户端。&lt;/p&gt;
+&lt;p&gt;因为是客户嘛，客户要下载的东西，所以叫客户端。&lt;/p&gt;
+&lt;p&gt;那服务端呢就是人家公司要有的东西，公司要有一个超级大电脑，这个电脑叫做服务器。这个服务器就是要管理服务端的，就相当于什么呢？它的服务端存放的东西就是QQ账号、iD账号、身份证以及你的密码这些东西。它要放到服务端上，就是你基本上不能看到的东西。&lt;/p&gt;
+&lt;p&gt;相当于是客户与公司，与这些产品。比如说客户与QQ交互的这么样一个地方，就是服务端。&lt;/p&gt;
+&lt;p&gt;比如说我在登录QQ的时候我要输入账号输入密码，我一点登录他有网，他就把账号密码发到腾讯那，腾讯检查，OK，是本人，让你登录，返回来。怎么样？从服务端返回来告诉你：哦，你可以登录。告诉客户端：行，你可以登录。就这么一个过程。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【杂谈】软件开发方向以及软件分类</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b025/</link>
+        <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b025/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%8F%E5%A4%A9%E6%A3%AE%E6%9E%97-%E5%A4%A7%E6%A0%91%E4%BB%B0%E6%8B%8D.png" alt="Featured image of post 【杂谈】软件开发方向以及软件分类" /&gt;&lt;h1 id=&#34;软件开发方向以及软件分类&#34;&gt;软件开发方向以及软件分类
+&lt;/h1&gt;&lt;p&gt;我们这一课呢就来说一说软件，很多人可能会问，说我学C语言目的不就是为了编写一些软件或者说一些程序嘛，不就是这个目的吗？为什么要选它对吧。所以我们必须要知道什么是软件。就通俗来说（不是标准的定义），就是程序+数据，通俗来说是这样。&lt;/p&gt;
+&lt;p&gt;什么叫程序+数据，你从C语言上写的这些东西叫程序是吧，比如说你写了一个微信，微信属于程序对吧，你编写了一个程序嘛对不对。然后呢他要和用户的数据进行对接，什么叫用户数据，就相当于你手机号，你登录的时候你要手机号是吧，你要点一下。你点一下，你点的那一瞬间，它是归谁管，归程序管。对吧，然后呢，你把这些数据输上去，用程序去操作这些手续，他就判断你这用户这个密码对不对是吧，这属于程序的事情对吧，然后判断你的数据对不对。然后呢，再给你结果说你登录成功，登录失败，就本质上来说，程序加数据的操作就相当于是一个软件。对吧，本质上来说就是这样的。&lt;/p&gt;
+&lt;p&gt;那么软件呢，本质上来说，因为it类的专业或者说是行业，它基本上就是说它是一个大类。他们下面有很多软件工程学，硬件的，电子的，信息的，数据的还有人工智能各种各样的类别太多了。专业呢也是层出不穷，计科，媒体什么东西，反正都有，都是it类的。&lt;/p&gt;
+&lt;p&gt;但是讲软件呢，今天就来细细的讲一下软件有哪些分类&lt;/p&gt;
+&lt;p&gt;1.系统软件&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【数学】离散数学-1</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b022/</link>
+        <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b022/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b022/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%8F%E5%A4%A9%E6%A3%AE%E6%9E%97-%E5%A4%A7%E6%A0%91%E4%BB%B0%E6%8B%8D.png" alt="Featured image of post 【数学】离散数学-1" /&gt;&lt;h1 id=&#34;离散数学与软件工程001逻辑命题-第一讲&#34;&gt;【离散数学与软件工程】001.逻辑命题 第一讲
+&lt;/h1&gt;&lt;p&gt;那么我们现在呢，就来学第一章的内容。我们称之为叫逻辑学的基础。逻辑学呢，哎，我觉得，这个课还是要记笔记的啊。但是记笔记之前，我希望能够澄清一件事情，就是你一定要先听懂我在讲什么。听懂听完了再去记，你截个图，你不记都OK，我都不会说什么。&lt;/p&gt;
+&lt;p&gt;那么逻辑（logic）逻辑听起来可能有些抽象，但是实际上它是让我们进行清晰思考，构建哪些有力的论证，编写计算机基础，一个非常非常基础的一个东西。很多人就是因为那些代码的if-else里边的这些东西，他没搞明白，就是各种各样的判断，他直接就晕了。他不明白为什么各种各样的判断啊，他就直接晕了。没有办法去理解，他理解这个东西，他判断这个东西他很困难，那这个就是逻辑上的欠缺。包括我们for语句当中每一次循环，他很容易就绕弯，很容易就晕了。就这个东西我们没有这样的教学，就很可惜。&lt;/p&gt;
+&lt;p&gt;那么对于逻辑学第一章的内容，我跟大家介绍的，我们称之为叫做，&lt;strong&gt;命题逻辑（Propositional Logic）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;命题 Propositon&lt;/p&gt;
+&lt;p&gt;定义：命题是一个陈述句，它要么是真 True,要么是假 False&lt;/p&gt;
+&lt;p&gt;陈述句-&amp;gt; statement -&amp;gt; 说白了，它在陈述一个事实&lt;/p&gt;
+&lt;p&gt;其次，这个陈述必须要有一个具体的明确的真值（true value），“或许”，“可能” ✕&lt;/p&gt;
+&lt;p&gt;真 or 假&lt;/p&gt;
+&lt;p&gt;第一个例子——海鸥会飞&lt;/p&gt;
+&lt;p&gt;大家看这个句子，&lt;/p&gt;
+&lt;p&gt;这个句子是一个陈述句吗？是的，明显啊。&lt;/p&gt;
+&lt;p&gt;它有明确的真值吗？啊是的，对吧。&lt;/p&gt;
+&lt;p&gt;我们知道海鸥确实会飞，所以我要考你，这个命题的真值是什么？true 因为海鸥真的会飞。&lt;/p&gt;
+&lt;p&gt;你这句话但凡要改猪会飞，那这个情况这个命题真值肯定就是 false。&lt;/p&gt;
+&lt;p&gt;OK，这是第一个啊，再看一个例子——2^2 + 3^2 = 4^2&lt;/p&gt;
+&lt;p&gt;没看错啊，来我问你这个命题的真值是啥，这个很明显了是吧。这根本就不是，他妈根本不可能，这4 + 9 怎么就 = 16 呢。这根本就不可能，就是胡说八道。所以这个值肯定就是false。&lt;/p&gt;
+&lt;p&gt;那么现在看一个非常有意思的一条案例——每一个正偶数都可以写成两个素数之和&lt;/p&gt;
+&lt;p&gt;哎，这个好像有点难，不用关心，你不会算也没关系。&lt;/p&gt;
+&lt;p&gt;来，我来问你，这句话它首先是不是一个statement，一个陈述句。那么它的真值是什么呢？现在我就有一个问题啊。其实这个就是哥德巴赫猜想，有数学好的同学应该猜得出来，你数学不好也没事。就是至今数学家还没有解决的一个难题，我们目前根本就不知道它的真假，但我们相信他肯定有一个值。什么值呢？就这句话要么这猜想是对的要么是错的。说白了就是这句话要么是真要么是假，不可能介于两者之间。所以他符合命题的定义。它符合命题的定义，但是我们没有办法知道他是真还是假。所以这个就要么是真要么是假，我们只能这样去确定。但首先它肯定是个命题，他肯定也是个陈述句。OK，这个重要啊，这个我们要记清楚啊。&lt;/p&gt;
+&lt;p&gt;那大家说一下什么不是命题呢？什么情况下才不是命题？我们看一下非命题的例子啊——午饭吃啥&lt;/p&gt;
+&lt;p&gt;这个很明显，这是个疑问句，他不是个陈述句是吧，它在提问，而不是描述一个东西，一个事实。它没有真假可言，你说午饭吃什么，这哪还真的还是假的，你说这个没有逻辑对吧。所以你不能回答午饭吃什么，这句话是真的，你也不能这样回答。所以它压根就不是命题，它就是个疑问句。&lt;/p&gt;
+&lt;p&gt;比如说再看一例子——x - 4 = 6&lt;/p&gt;
+&lt;p&gt;来我问你这是啥？这是一个包含变量，我们叫做open sentence。我们中文里边有一个叫做开路句。&lt;/p&gt;
+&lt;p&gt;什么叫开路句？这个真假取决于x变量的值。 包含一个变量&lt;/p&gt;
+&lt;p&gt;when x = 10 t&lt;/p&gt;
+&lt;p&gt;when x = 	  f&lt;/p&gt;
+&lt;p&gt;如果x为10那这个肯定是true，那如果x是其他的，那基本上是false。所以它没有一个固定的明确的真值，因此它本身就不是一个命题。它包含了一个变量。&lt;/p&gt;
+&lt;p&gt;所以开路句也就意味着包含一个变量，而陈述要求我们要有一个确定的事实，所以它本身不是一个命题。这是我们要给大家讲的，所以大家知道命题这个概念啊，很重要。&lt;/p&gt;
+&lt;p&gt;所以为了我们方便研究操作逻辑我们通常会使用变量。&lt;/p&gt;
+&lt;p&gt;例如，设p命题为：天在下雨&lt;/p&gt;
+&lt;p&gt;当我们要讨论天在下雨这个命题的逻辑关系时，我们就可以用P来指代它。&lt;/p&gt;
+&lt;p&gt;好，那我们接下来就要去给大家介绍逻辑运算符（Logical Operat）。逻辑运算符呢我们在C语言，我们在其他语言里基本上都有一个。&lt;/p&gt;
+&lt;p&gt;有人说：我学了离散数学太爽了。两门课，计算机里边最难的两门。我认为计算机特别是软件工程，计算机科学里边两门最难的课：一门是data structure就是数据结构和算法，一门呢就是我们的离散数学。这是公认的，通用的比较难的课。这两门课只要你学的很牛逼，那很爽的啊，那基本上很爽。所以我们必须要理解逻辑运算符，我们在整个离散数学当中要解释所谓的逻辑运算符，怎么去理解。&lt;/p&gt;
+&lt;p&gt;我们刚刚有了命题，所以下一步讲就是把这些东西，简单的命题组合起来，形成更复杂的复合命题，刚才我们学了命题是吧，我们接下来可能要组合起来变成复合命题。那么就需要用到逻辑运算符。&lt;/p&gt;
+&lt;h2 id=&#34;复合命题&#34;&gt;复合命题
+&lt;/h2&gt;&lt;p&gt;1.否定（Negation， ¬）&lt;/p&gt;
+&lt;p&gt;¬P 读：Not P 非P&lt;/p&gt;
+&lt;p&gt;它的作用很简单，把原先命题的真值给颠倒过来&lt;/p&gt;
+&lt;p&gt;if p true, ¬ P false&lt;/p&gt;
+&lt;p&gt;if p false, ¬ p true&lt;/p&gt;
+&lt;p&gt;设P 天在下雨&lt;/p&gt;
+&lt;p&gt;¬P 天没在下雨&lt;/p&gt;
+&lt;p&gt;¬p 先下雨是假的&lt;/p&gt;
+&lt;p&gt;Truth Table 真值表&lt;/p&gt;
+&lt;p&gt;P	¬P&lt;/p&gt;
+&lt;p&gt;T	  F&lt;/p&gt;
+&lt;p&gt;F	  T&lt;/p&gt;
+&lt;p&gt;比如说天没在下雨，然后你一开窗户一看，简直是胡说八道，外面正下着哗哗大雨。你这个是假的，颠倒过来就是true。&lt;/p&gt;
+&lt;p&gt;2.合取（Conjunction, ∧）&lt;/p&gt;
+&lt;p&gt;简单来说就是and。&lt;/p&gt;
+&lt;p&gt;命题p 和 q的合取记作 p ∧ q&lt;/p&gt;
+&lt;p&gt;当p和q两者都为真，p∧q才为真。&lt;/p&gt;
+&lt;p&gt;p 天在下雨&lt;/p&gt;
+&lt;p&gt;q 我湿了&lt;/p&gt;
+&lt;p&gt;p ∧ q : 天在下雨并且我湿了&lt;/p&gt;
+&lt;p&gt;p	q		p∧q&lt;/p&gt;
+&lt;p&gt;T	T		T&lt;/p&gt;
+&lt;p&gt;T	F		F&lt;/p&gt;
+&lt;p&gt;F	T		F&lt;/p&gt;
+&lt;p&gt;F	F		F&lt;/p&gt;
+&lt;p&gt;3.析取（Disjunction， ∨）&lt;/p&gt;
+&lt;p&gt;or ||&lt;/p&gt;
+&lt;p&gt;p &lt;strong&gt;∨&lt;/strong&gt; q&lt;/p&gt;
+&lt;p&gt;当p或q中至少有一个为真，那么p ∨ q = true，那么特别这里要提醒一下，&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【数学】离散数学-0</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b021/</link>
+        <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b021/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b021/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%82%8D%E6%99%9A%E8%B7%AF%E7%81%AF-%E5%B1%B1%E8%84%89-%E6%B0%B4%E9%9D%A2.png" alt="Featured image of post 【数学】离散数学-0" /&gt;&lt;h1 id=&#34;离散数学与软件工程000离散数学简介&#34;&gt;【离散数学与软件工程】000.离散数学简介
+&lt;/h1&gt;&lt;h2 id=&#34;离散数学简介&#34;&gt;离散数学简介
+&lt;/h2&gt;&lt;p&gt;在正式进入我们第一的学习之前我跟大家先聊几分钟，为什么我们要坐在这里学这门如此抽象的课程。&lt;/p&gt;
+&lt;p&gt;那么第一印象是大家从中学到大学最多接触的就是微积分了，微积分处理的是连续的事件，平滑的曲线，有序的变化，流动的时空。你可以把它想象成一个平滑的斜坡，相当于就是停留在斜坡上的任意一个点，因为它是一个平滑的曲线，任意一个点都有可能。&lt;/p&gt;
+&lt;p&gt;但离散数学不是这样，顾名思义，他的研究就是离散的、可数的对象。世界不是一条斜坡，而是一个很清晰的一个台阶。就跟你爬山一样，每一个台阶都非常清松。你只能站在第一级、第二级、第三级的台阶上，绝不能站在1.5的台阶，没有这样东西。&lt;/p&gt;
+&lt;p&gt;对于离散数据来说，整数逻辑命题计算机当中的零和一（称之为叫比特），那么社交网络当中的人际关系图，这些都是离散数学研究的对象。&lt;/p&gt;
+&lt;p&gt;简单来说，如果微积分是一门描述或者说叫模拟世界的语言，那么离散数学就是数字世界的语言，那么对于这个AI充斥的时代，离散数学就是你制胜的法宝，特别是对计算机的同学来说。&lt;/p&gt;
+&lt;p&gt;所以数学终究是一门描述性的语言。&lt;/p&gt;
+&lt;h2 id=&#34;那么这个课到底有什么用啊&#34;&gt;那么这个课到底有什么用啊？
+&lt;/h2&gt;&lt;p&gt;他几乎我可以告诉你，是你未来专业生涯的内功心法。&lt;/p&gt;
+&lt;p&gt;我们知道在座的很多同学，我们的目标可能会成为一名优秀的软件工程师、数据科学家、算法专家、网络安全专家，为你们会学到各种各样的编程语言，五花八门，比如说pthon，Java, C++，C啊等等。你们会学习各种各样的框架技术。这些就是相当于你们手中的武器，但是一个高手不能只有锋利的兵器，需要深厚的内功，而离散数学就是你们在计算机领域当中的内功。
+每次你打开高德地图、谷歌地图他能在毫秒之间为你规划一条最短的路径，那这个背后呢我们称之为叫做图论。图论的算法这是离散数学的一个核心。
+比如说你电脑CPU之所以能计算他是因为有亿万个微小的逻辑门电路组成，这些电路的原理就是我们要学习的逻辑。
+你每发送一条微信，每一次网上银行的转账之所以是安全的，是因为有数论和密码学在背后保护，这也是离散数学当中的一部分。
+从人工智能到数据库的设计，从算法分析到操作系统，你未来要学习的几乎每一门的专业课，核心的课它的基石全部都深植于离散数学。
+没有这门课程打下的基础，你或许能成为一个熟练的码农。在一个AI的时代，你确确实实能用AI写API，但很难能够成为一个解决问题或解决复杂问题的计算机科学家，甚至是顶尖的工程师。这就是你和现代人，和现在在AI时代和其他成员拉开差距的一门课。&lt;/p&gt;
+&lt;h2 id=&#34;那我们为什么要用通俗的语言去学习它呢&#34;&gt;那我们为什么要用通俗的语言去学习它呢？
+&lt;/h2&gt;&lt;p&gt;现在我想谈一个现实的问题，就是我们过去的学习当中呢，无论是中学还是大学基础课程，我们更常常习惯关注于&lt;strong&gt;怎么算&lt;/strong&gt;，或者说如何利用公式啊，如何利用大量的刷题，特别是中国的学生。就是刷题，利用题海战术获得一个确切的答案。那这种训练呢，似乎在高考这个领域是非常有效的，但在实际应用领域里狗屁不是。但是这也可能就是说，我们思维上就造成了一处短板。特别是在中国的学生里，他思维上是没有任何思维的，他没有逻辑，我们很少被系统的去训练。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么要这么做？他是怎么来的？这个方法为什么是正确的？他是如何被证明的？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这些东西也是中国的学生唯一欠缺的东西。&lt;/p&gt;
+&lt;p&gt;所以这门课，尤其是像我们即将要开始的逻辑和证明这一章，我们就是要攻击这个面板，大学教授还有中学的教师你们听好了，我向你们发出挑战，我向你们发出致命的挑战，还有教育制度向你们发出这样的挑战。&lt;/p&gt;
+&lt;p&gt;因为我们要做的训练不是你的计算能力，如果你中学的时候你计算能力很垃圾，你说我微积分我都不知道是啥，求导我也不知道是啥，在我们这门课里你根本就无所畏惧。&lt;/p&gt;
+&lt;p&gt;我们这门课专注的不是你的计算能力，不是比的谁算得快。谁算的快那计算机比我们算的都快，拿计算机咔咔咔比我们算的都快。我们这节课要讲的是你&lt;strong&gt;抽象的思维能力&lt;/strong&gt;，&lt;strong&gt;逻辑的推理能力&lt;/strong&gt;以及&lt;strong&gt;严谨的证明能力&lt;/strong&gt;才是我们这节课真正的重点。这门课对于一些专科背景或者是基础稍弱的同学来说，可能是一次全新的甚至是有一些有意思的挑战。你可能会觉得他很绕，不像解方程那样，不像有公式那样套着去用，不用担心这很正常。&lt;/p&gt;
+&lt;p&gt;因为我们正在重塑我们整个思维的习惯，所以我的任务就是把看似这些抽象的概念，用最通俗的语言，用最贴近我们生活的例子把它讲明白。我们会一步一个脚印，确保每个人都能跟上。而且呢最重要的是，我们尽可能不是用国内的教材我们不使用那些很抽象的，就是看起来只有北大清华的人才能听懂的那些课程，我们不采用那个。其他的课跟我们的课是完全冲突的，我们就相当于是对整个教育行业，中国的教育行业发起了一次总攻。&lt;/p&gt;
+&lt;p&gt;所以我们的目标呢不是让你去背符号，也不是让你去背定义，对于文科的学生来说呢这也是一个福音，而是让你掌握一种真正的我们叫做计算的思维，一种能够&lt;strong&gt;清晰的严谨的分析问题，设计方案，证明正确的思维方式&lt;/strong&gt;。这种思维方式无论未来技术如何去更迭，无论未来你处在什么样的岗位上，我相信你都是你人生当中最宝贵的财富。&lt;/p&gt;
+&lt;p&gt;好了，说了这么多，相信大家已经对这门课有一个初步的认识，那么我们开始构建这座计算机科学大厦的第一块基石，就是逻辑。我们下节课再见。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【杂谈】IT行业学历是否重要</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b012/</link>
+        <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b012/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b012/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%9C%E6%99%AF-%E5%AF%8C%E5%A3%AB%E5%B1%B1.png" alt="Featured image of post 【杂谈】IT行业学历是否重要" /&gt;&lt;h2 id=&#34;it行业学历是否重要&#34;&gt;IT行业学历是否重要
+&lt;/h2&gt;&lt;p&gt;你做什么行业学历不重要。今天我就敢这么说这句话，你做什么行业学历不重要你告诉我。学历就是个门槛，这是一个事实，不争的事实。&lt;/p&gt;
+&lt;p&gt;比如说你来微软面试，你如果不是985很有可能我连你的简历都不看，就hr那关都过不了，人事那关过不了。就是通过人力资源去筛选，人力筛选完成之后我才会看到，就这个意思。&lt;/p&gt;
+&lt;p&gt;所以你说学历不重要？纯他妈扯淡，那些说学历不重要的人都可以去死了。我听很多的up主还有很多的论坛都说搞这个IT技术的学历不重要，我真想给他一耳巴掌啊。不可能的，学历怎么可能不重要，一定在胡扯了。他是没有学历才这么说的，说学历不重要的人一定没有学历。&lt;/p&gt;
+&lt;p&gt;真正有技能的人他可能说他不需要学历，但是相反有一点就是你能力比较强，你不需要学历。但这是另一个说法。那还有一个说法就是说你没有学历，那你找工作肯定就不行。所以学历还是很重要的。&lt;/p&gt;
+&lt;p&gt;但是这个学历呢，就是有一个&lt;strong&gt;学历下限&lt;/strong&gt;就可以了。什么叫学历下限，我们讲这个学历不是学历上限我们讲的是学历下限。比如说大部分的国内企业基本上招IT技术人员的就是本科最多，不是专科是本科。所以你会发现专科学生它找工作的时候概率比较低对吧。比如说专科投10家公司可能只有1家理你，那本科可能是3家或者是4家这样的。不好意思，研究生不是5家或6家。为什么呢，因为有学历下限，学历下限不代表学历上限。什么意思？就计算机这个行业不是说我学历越高我就获得机会越多，计算机行业不是这样的。计算机只有一个就是下限，下限就是本科，然后本科上面的研究生也好，博士生也好，只是说它的学历的下限提高了。&lt;/p&gt;
+&lt;p&gt;那剩下的就要看他的&lt;strong&gt;技术上限&lt;/strong&gt;了，这个是很重要的。所以这个是很有意思的啊，就是说并不是你学历高就意味着你工资高，你收入就高。你收入高，你的工作好是因为你进的企业好。所以要记住你的工资的上限，或者说你的收入和公司的好不好的上限不是由学历决定的。&lt;/p&gt;
+&lt;p&gt;你既然能满足大多数企业的要求，就是本科嘛，你能够满足这个要求先。你只要门槛能过，那剩下都好办。那剩下就看技能了对不对，那门槛都差不多，大家都是本科生就看你技能怎么样。并不是所有的工资高低都拿学历去贯通，这个说法肯定是有问题的。&lt;/p&gt;
+&lt;p&gt;假如说你在国内做的不是IT的，我们就举其他的例子都可以举出来。比如说你是医生，你在你们当地省立的医院做门诊的，就是相当于是科室，那你跟一个小城市市级医院的一个门诊，那能一样吗。那肯定不一样，就算你们是同一个学校毕业的，你们是同等学历，那肯定都不一样啊。&lt;/p&gt;
+&lt;p&gt;我说了学历只有下限没有上限，你要满足学历招聘的下限，这一点很重要，你要去过了那个门槛才行。技能要有上限。再重复一遍，学历下限，技能上限，工资与公司的上限是成正比的关系。&lt;/p&gt;
+&lt;p&gt;这是你在任何地方都不可能看的事实，也是当今社会最惨无人道的竞争手段。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【学习】IT行业学习的方法</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b011/</link>
+        <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b011/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b011/%E4%BA%91%E5%BD%A9%E5%93%86%E5%95%A6A%E6%A2%A6%E5%A4%A7%E9%9B%84.png" alt="Featured image of post 【学习】IT行业学习的方法" /&gt;&lt;h2 id=&#34;it行业学习的方法&#34;&gt;IT行业学习的方法
+&lt;/h2&gt;&lt;h3 id=&#34;数学和计算机专业的关系&#34;&gt;数学和计算机专业的关系
+&lt;/h3&gt;&lt;p&gt;数学只是作为计算机的基础，并不是说你需要精通。因为你学的是计算机又不是要做数学家你学那玩意学的再好也用不到，它只是做为一个为计算打下基础的这样的一个东西。那数学研究数学的东西交给人家数学家跟我们计算机没有什么关系。你也就研究学术时可能会用到更高深的数学知识。学计算机的话也就学这些：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;微积分-导数和积分&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;离散-组合数学、集合、关系&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线性代数-矩阵向量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;概率和统计-随机变量、概率分布&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;英语和计算机专业的关系&#34;&gt;英语和计算机专业的关系
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;听、说、读、写&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;他不是一个门槛，它只作为一项技能。&lt;/p&gt;
+&lt;p&gt;如果你能掌握英语就尽可能掌握英语，英语极大的提高一个人学习计算机和使用计算机的能力。&lt;/p&gt;
+&lt;p&gt;因为有很多的技术资源，像网络上一些有名的技术资源论坛，包括开源的社区、文档。这些东西都是用英语作为主要交流语言。而且你要去跟老外去沟通的话你确实需要用英语对吧，你需要跟国际的技术接轨。&lt;/p&gt;
+&lt;p&gt;所以说学计算机并不是说严格的要求英语水平，就和数学一样，我们又不是研究英语的，但我们的要求是什么呢，最起码是雅思6.0。不是你背单词，不是什么四六级，那东西都没用。最主要的就是听、说、读、写。就像是print输出就是print，我不会去想是打印啊，翻译啊这些，就这种感觉。你会发现像这样的英语啊，单词啊都是潜意识的去提高的，而不是说你天天去背，我是比较反感这个东西的。你背有什么用呢你要去用它对不对。&lt;/p&gt;
+&lt;p&gt;所以说学计算机最重要的能力是什么？阅读和编写。尤其是阅读，你能读懂文档，这个才是最主要的。&lt;/p&gt;
+&lt;h3 id=&#34;奖学金&#34;&gt;奖学金
+&lt;/h3&gt;&lt;p&gt;奖学金这个东西你能拿就拿，拿不了就拉倒。你要是上大学是为了拿奖学金那你这大学上的什么东西wok。你上大学又不是为了拿奖学金，只能说如果你上好，读的不错，你GPI都不错，你能拿就更好，不能拿就拉倒。不要是说为了它去奋斗，而是说为了你的人生自己的理想和目标，为了自己人生的幸福去奋斗。你不能为了个奖学金去奋斗，这他妈是什么逻辑。所以这个是不正确的价值观。&lt;/p&gt;
+&lt;h3 id=&#34;计算机类的书籍只具备参考的价值不具备学习的价值&#34;&gt;计算机类的书籍只具备参考的价值不具备学习的价值
+&lt;/h3&gt;&lt;p&gt;首先你要清楚计算机这个东西他是一门技术，技术怎么能通过书籍学习呢。这简直是胡说八道。技术肯定是通过你长期的练习，定期的训练去得到。&lt;/p&gt;
+&lt;p&gt;所有的书籍你记住，只要关于计算机的东西，它只具备参考的价值不具备学习的价值。&lt;/p&gt;
+&lt;h3 id=&#34;切莫相信个人的经历经验判断&#34;&gt;切莫相信个人的经历经验判断
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>【数学】高等数学</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b007/</link>
+        <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b007/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b007/yj2.png" alt="Featured image of post 【数学】高等数学" /&gt;&lt;h2 id=&#34;高等数学&#34;&gt;高等数学
+&lt;/h2&gt;&lt;h3 id=&#34;极限与连续&#34;&gt;极限与连续
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs1.jpg&#34;
+	width=&#34;2452&#34;
+	height=&#34;3538&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs1_hu_6c04fd84391116dc.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs1_hu_fbf3b15524c6d0eb.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;极限与连续&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;69&#34;
+		data-flex-basis=&#34;166px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;导数与微分&#34;&gt;导数与微分
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs2.jpg&#34;
+	width=&#34;2112&#34;
+	height=&#34;2980&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs2_hu_8d70d6721130ce8c.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs2_hu_a4abf6f66c0c9707.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;导数与微分&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;70&#34;
+		data-flex-basis=&#34;170px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;微分中值定理&#34;&gt;微分中值定理
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs3.jpg&#34;
+	width=&#34;2228&#34;
+	height=&#34;3400&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs3_hu_5e9f435e63d1f54d.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs3_hu_248a72cd0706bad4.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;微分中值定理&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;65&#34;
+		data-flex-basis=&#34;157px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;导数几何应用&#34;&gt;导数几何应用
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs4.jpg&#34;
+	width=&#34;2088&#34;
+	height=&#34;4764&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs4_hu_d3cf91293caae066.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs4_hu_c9a873692c7616f7.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;导数几何应用&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;43&#34;
+		data-flex-basis=&#34;105px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;公式表&#34;&gt;公式表
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs5.jpg&#34;
+	width=&#34;1483&#34;
+	height=&#34;4096&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs5_hu_df7cd6db39fc8f47.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs5_hu_98e7b4e131c057d3.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;公式表&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;36&#34;
+		data-flex-basis=&#34;86px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;以上均来自B站&lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/1035929235&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一高数&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1CC4y1T72s/?spm_id_from=333.1387.search.video_card.click&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【&lt;em&gt;高等数学&lt;/em&gt;(上)】期末3小时通关！考点公式全面梳理+考试锦囊（上集）&lt;/a&gt;有兴趣的可以自己去看。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

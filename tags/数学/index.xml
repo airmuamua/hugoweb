@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>数学 on Skye</title>
+        <link>https://airmuamua.github.io/hugoweb/tags/%E6%95%B0%E5%AD%A6/</link>
+        <description>Recent content in 数学 on Skye</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>空气炸锅中-Skye</copyright>
+        <lastBuildDate>Mon, 22 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://airmuamua.github.io/hugoweb/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【数学】离散数学-1</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b022/</link>
+        <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b022/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b022/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%8F%E5%A4%A9%E6%A3%AE%E6%9E%97-%E5%A4%A7%E6%A0%91%E4%BB%B0%E6%8B%8D.png" alt="Featured image of post 【数学】离散数学-1" /&gt;&lt;h1 id=&#34;离散数学与软件工程001逻辑命题-第一讲&#34;&gt;【离散数学与软件工程】001.逻辑命题 第一讲
+&lt;/h1&gt;&lt;p&gt;那么我们现在呢，就来学第一章的内容。我们称之为叫逻辑学的基础。逻辑学呢，哎，我觉得，这个课还是要记笔记的啊。但是记笔记之前，我希望能够澄清一件事情，就是你一定要先听懂我在讲什么。听懂听完了再去记，你截个图，你不记都OK，我都不会说什么。&lt;/p&gt;
+&lt;p&gt;那么逻辑（logic）逻辑听起来可能有些抽象，但是实际上它是让我们进行清晰思考，构建哪些有力的论证，编写计算机基础，一个非常非常基础的一个东西。很多人就是因为那些代码的if-else里边的这些东西，他没搞明白，就是各种各样的判断，他直接就晕了。他不明白为什么各种各样的判断啊，他就直接晕了。没有办法去理解，他理解这个东西，他判断这个东西他很困难，那这个就是逻辑上的欠缺。包括我们for语句当中每一次循环，他很容易就绕弯，很容易就晕了。就这个东西我们没有这样的教学，就很可惜。&lt;/p&gt;
+&lt;p&gt;那么对于逻辑学第一章的内容，我跟大家介绍的，我们称之为叫做，&lt;strong&gt;命题逻辑（Propositional Logic）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;命题 Propositon&lt;/p&gt;
+&lt;p&gt;定义：命题是一个陈述句，它要么是真 True,要么是假 False&lt;/p&gt;
+&lt;p&gt;陈述句-&amp;gt; statement -&amp;gt; 说白了，它在陈述一个事实&lt;/p&gt;
+&lt;p&gt;其次，这个陈述必须要有一个具体的明确的真值（true value），“或许”，“可能” ✕&lt;/p&gt;
+&lt;p&gt;真 or 假&lt;/p&gt;
+&lt;p&gt;第一个例子——海鸥会飞&lt;/p&gt;
+&lt;p&gt;大家看这个句子，&lt;/p&gt;
+&lt;p&gt;这个句子是一个陈述句吗？是的，明显啊。&lt;/p&gt;
+&lt;p&gt;它有明确的真值吗？啊是的，对吧。&lt;/p&gt;
+&lt;p&gt;我们知道海鸥确实会飞，所以我要考你，这个命题的真值是什么？true 因为海鸥真的会飞。&lt;/p&gt;
+&lt;p&gt;你这句话但凡要改猪会飞，那这个情况这个命题真值肯定就是 false。&lt;/p&gt;
+&lt;p&gt;OK，这是第一个啊，再看一个例子——2^2 + 3^2 = 4^2&lt;/p&gt;
+&lt;p&gt;没看错啊，来我问你这个命题的真值是啥，这个很明显了是吧。这根本就不是，他妈根本不可能，这4 + 9 怎么就 = 16 呢。这根本就不可能，就是胡说八道。所以这个值肯定就是false。&lt;/p&gt;
+&lt;p&gt;那么现在看一个非常有意思的一条案例——每一个正偶数都可以写成两个素数之和&lt;/p&gt;
+&lt;p&gt;哎，这个好像有点难，不用关心，你不会算也没关系。&lt;/p&gt;
+&lt;p&gt;来，我来问你，这句话它首先是不是一个statement，一个陈述句。那么它的真值是什么呢？现在我就有一个问题啊。其实这个就是哥德巴赫猜想，有数学好的同学应该猜得出来，你数学不好也没事。就是至今数学家还没有解决的一个难题，我们目前根本就不知道它的真假，但我们相信他肯定有一个值。什么值呢？就这句话要么这猜想是对的要么是错的。说白了就是这句话要么是真要么是假，不可能介于两者之间。所以他符合命题的定义。它符合命题的定义，但是我们没有办法知道他是真还是假。所以这个就要么是真要么是假，我们只能这样去确定。但首先它肯定是个命题，他肯定也是个陈述句。OK，这个重要啊，这个我们要记清楚啊。&lt;/p&gt;
+&lt;p&gt;那大家说一下什么不是命题呢？什么情况下才不是命题？我们看一下非命题的例子啊——午饭吃啥&lt;/p&gt;
+&lt;p&gt;这个很明显，这是个疑问句，他不是个陈述句是吧，它在提问，而不是描述一个东西，一个事实。它没有真假可言，你说午饭吃什么，这哪还真的还是假的，你说这个没有逻辑对吧。所以你不能回答午饭吃什么，这句话是真的，你也不能这样回答。所以它压根就不是命题，它就是个疑问句。&lt;/p&gt;
+&lt;p&gt;比如说再看一例子——x - 4 = 6&lt;/p&gt;
+&lt;p&gt;来我问你这是啥？这是一个包含变量，我们叫做open sentence。我们中文里边有一个叫做开路句。&lt;/p&gt;
+&lt;p&gt;什么叫开路句？这个真假取决于x变量的值。 包含一个变量&lt;/p&gt;
+&lt;p&gt;when x = 10 t&lt;/p&gt;
+&lt;p&gt;when x = 	  f&lt;/p&gt;
+&lt;p&gt;如果x为10那这个肯定是true，那如果x是其他的，那基本上是false。所以它没有一个固定的明确的真值，因此它本身就不是一个命题。它包含了一个变量。&lt;/p&gt;
+&lt;p&gt;所以开路句也就意味着包含一个变量，而陈述要求我们要有一个确定的事实，所以它本身不是一个命题。这是我们要给大家讲的，所以大家知道命题这个概念啊，很重要。&lt;/p&gt;
+&lt;p&gt;所以为了我们方便研究操作逻辑我们通常会使用变量。&lt;/p&gt;
+&lt;p&gt;例如，设p命题为：天在下雨&lt;/p&gt;
+&lt;p&gt;当我们要讨论天在下雨这个命题的逻辑关系时，我们就可以用P来指代它。&lt;/p&gt;
+&lt;p&gt;好，那我们接下来就要去给大家介绍逻辑运算符（Logical Operat）。逻辑运算符呢我们在C语言，我们在其他语言里基本上都有一个。&lt;/p&gt;
+&lt;p&gt;有人说：我学了离散数学太爽了。两门课，计算机里边最难的两门。我认为计算机特别是软件工程，计算机科学里边两门最难的课：一门是data structure就是数据结构和算法，一门呢就是我们的离散数学。这是公认的，通用的比较难的课。这两门课只要你学的很牛逼，那很爽的啊，那基本上很爽。所以我们必须要理解逻辑运算符，我们在整个离散数学当中要解释所谓的逻辑运算符，怎么去理解。&lt;/p&gt;
+&lt;p&gt;我们刚刚有了命题，所以下一步讲就是把这些东西，简单的命题组合起来，形成更复杂的复合命题，刚才我们学了命题是吧，我们接下来可能要组合起来变成复合命题。那么就需要用到逻辑运算符。&lt;/p&gt;
+&lt;h2 id=&#34;复合命题&#34;&gt;复合命题
+&lt;/h2&gt;&lt;p&gt;1.否定（Negation， ¬）&lt;/p&gt;
+&lt;p&gt;¬P 读：Not P 非P&lt;/p&gt;
+&lt;p&gt;它的作用很简单，把原先命题的真值给颠倒过来&lt;/p&gt;
+&lt;p&gt;if p true, ¬ P false&lt;/p&gt;
+&lt;p&gt;if p false, ¬ p true&lt;/p&gt;
+&lt;p&gt;设P 天在下雨&lt;/p&gt;
+&lt;p&gt;¬P 天没在下雨&lt;/p&gt;
+&lt;p&gt;¬p 先下雨是假的&lt;/p&gt;
+&lt;p&gt;Truth Table 真值表&lt;/p&gt;
+&lt;p&gt;P	¬P&lt;/p&gt;
+&lt;p&gt;T	  F&lt;/p&gt;
+&lt;p&gt;F	  T&lt;/p&gt;
+&lt;p&gt;比如说天没在下雨，然后你一开窗户一看，简直是胡说八道，外面正下着哗哗大雨。你这个是假的，颠倒过来就是true。&lt;/p&gt;
+&lt;p&gt;2.合取（Conjunction, ∧）&lt;/p&gt;
+&lt;p&gt;简单来说就是and。&lt;/p&gt;
+&lt;p&gt;命题p 和 q的合取记作 p ∧ q&lt;/p&gt;
+&lt;p&gt;当p和q两者都为真，p∧q才为真。&lt;/p&gt;
+&lt;p&gt;p 天在下雨&lt;/p&gt;
+&lt;p&gt;q 我湿了&lt;/p&gt;
+&lt;p&gt;p ∧ q : 天在下雨并且我湿了&lt;/p&gt;
+&lt;p&gt;p	q		p∧q&lt;/p&gt;
+&lt;p&gt;T	T		T&lt;/p&gt;
+&lt;p&gt;T	F		F&lt;/p&gt;
+&lt;p&gt;F	T		F&lt;/p&gt;
+&lt;p&gt;F	F		F&lt;/p&gt;
+&lt;p&gt;3.析取（Disjunction， ∨）&lt;/p&gt;
+&lt;p&gt;or ||&lt;/p&gt;
+&lt;p&gt;p &lt;strong&gt;∨&lt;/strong&gt; q&lt;/p&gt;
+&lt;p&gt;当p或q中至少有一个为真，那么p ∨ q = true，那么特别这里要提醒一下，&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【数学】离散数学-0</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b021/</link>
+        <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b021/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b021/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%82%8D%E6%99%9A%E8%B7%AF%E7%81%AF-%E5%B1%B1%E8%84%89-%E6%B0%B4%E9%9D%A2.png" alt="Featured image of post 【数学】离散数学-0" /&gt;&lt;h1 id=&#34;离散数学与软件工程000离散数学简介&#34;&gt;【离散数学与软件工程】000.离散数学简介
+&lt;/h1&gt;&lt;h2 id=&#34;离散数学简介&#34;&gt;离散数学简介
+&lt;/h2&gt;&lt;p&gt;在正式进入我们第一的学习之前我跟大家先聊几分钟，为什么我们要坐在这里学这门如此抽象的课程。&lt;/p&gt;
+&lt;p&gt;那么第一印象是大家从中学到大学最多接触的就是微积分了，微积分处理的是连续的事件，平滑的曲线，有序的变化，流动的时空。你可以把它想象成一个平滑的斜坡，相当于就是停留在斜坡上的任意一个点，因为它是一个平滑的曲线，任意一个点都有可能。&lt;/p&gt;
+&lt;p&gt;但离散数学不是这样，顾名思义，他的研究就是离散的、可数的对象。世界不是一条斜坡，而是一个很清晰的一个台阶。就跟你爬山一样，每一个台阶都非常清松。你只能站在第一级、第二级、第三级的台阶上，绝不能站在1.5的台阶，没有这样东西。&lt;/p&gt;
+&lt;p&gt;对于离散数据来说，整数逻辑命题计算机当中的零和一（称之为叫比特），那么社交网络当中的人际关系图，这些都是离散数学研究的对象。&lt;/p&gt;
+&lt;p&gt;简单来说，如果微积分是一门描述或者说叫模拟世界的语言，那么离散数学就是数字世界的语言，那么对于这个AI充斥的时代，离散数学就是你制胜的法宝，特别是对计算机的同学来说。&lt;/p&gt;
+&lt;p&gt;所以数学终究是一门描述性的语言。&lt;/p&gt;
+&lt;h2 id=&#34;那么这个课到底有什么用啊&#34;&gt;那么这个课到底有什么用啊？
+&lt;/h2&gt;&lt;p&gt;他几乎我可以告诉你，是你未来专业生涯的内功心法。&lt;/p&gt;
+&lt;p&gt;我们知道在座的很多同学，我们的目标可能会成为一名优秀的软件工程师、数据科学家、算法专家、网络安全专家，为你们会学到各种各样的编程语言，五花八门，比如说pthon，Java, C++，C啊等等。你们会学习各种各样的框架技术。这些就是相当于你们手中的武器，但是一个高手不能只有锋利的兵器，需要深厚的内功，而离散数学就是你们在计算机领域当中的内功。
+每次你打开高德地图、谷歌地图他能在毫秒之间为你规划一条最短的路径，那这个背后呢我们称之为叫做图论。图论的算法这是离散数学的一个核心。
+比如说你电脑CPU之所以能计算他是因为有亿万个微小的逻辑门电路组成，这些电路的原理就是我们要学习的逻辑。
+你每发送一条微信，每一次网上银行的转账之所以是安全的，是因为有数论和密码学在背后保护，这也是离散数学当中的一部分。
+从人工智能到数据库的设计，从算法分析到操作系统，你未来要学习的几乎每一门的专业课，核心的课它的基石全部都深植于离散数学。
+没有这门课程打下的基础，你或许能成为一个熟练的码农。在一个AI的时代，你确确实实能用AI写API，但很难能够成为一个解决问题或解决复杂问题的计算机科学家，甚至是顶尖的工程师。这就是你和现代人，和现在在AI时代和其他成员拉开差距的一门课。&lt;/p&gt;
+&lt;h2 id=&#34;那我们为什么要用通俗的语言去学习它呢&#34;&gt;那我们为什么要用通俗的语言去学习它呢？
+&lt;/h2&gt;&lt;p&gt;现在我想谈一个现实的问题，就是我们过去的学习当中呢，无论是中学还是大学基础课程，我们更常常习惯关注于&lt;strong&gt;怎么算&lt;/strong&gt;，或者说如何利用公式啊，如何利用大量的刷题，特别是中国的学生。就是刷题，利用题海战术获得一个确切的答案。那这种训练呢，似乎在高考这个领域是非常有效的，但在实际应用领域里狗屁不是。但是这也可能就是说，我们思维上就造成了一处短板。特别是在中国的学生里，他思维上是没有任何思维的，他没有逻辑，我们很少被系统的去训练。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么要这么做？他是怎么来的？这个方法为什么是正确的？他是如何被证明的？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这些东西也是中国的学生唯一欠缺的东西。&lt;/p&gt;
+&lt;p&gt;所以这门课，尤其是像我们即将要开始的逻辑和证明这一章，我们就是要攻击这个面板，大学教授还有中学的教师你们听好了，我向你们发出挑战，我向你们发出致命的挑战，还有教育制度向你们发出这样的挑战。&lt;/p&gt;
+&lt;p&gt;因为我们要做的训练不是你的计算能力，如果你中学的时候你计算能力很垃圾，你说我微积分我都不知道是啥，求导我也不知道是啥，在我们这门课里你根本就无所畏惧。&lt;/p&gt;
+&lt;p&gt;我们这门课专注的不是你的计算能力，不是比的谁算得快。谁算的快那计算机比我们算的都快，拿计算机咔咔咔比我们算的都快。我们这节课要讲的是你&lt;strong&gt;抽象的思维能力&lt;/strong&gt;，&lt;strong&gt;逻辑的推理能力&lt;/strong&gt;以及&lt;strong&gt;严谨的证明能力&lt;/strong&gt;才是我们这节课真正的重点。这门课对于一些专科背景或者是基础稍弱的同学来说，可能是一次全新的甚至是有一些有意思的挑战。你可能会觉得他很绕，不像解方程那样，不像有公式那样套着去用，不用担心这很正常。&lt;/p&gt;
+&lt;p&gt;因为我们正在重塑我们整个思维的习惯，所以我的任务就是把看似这些抽象的概念，用最通俗的语言，用最贴近我们生活的例子把它讲明白。我们会一步一个脚印，确保每个人都能跟上。而且呢最重要的是，我们尽可能不是用国内的教材我们不使用那些很抽象的，就是看起来只有北大清华的人才能听懂的那些课程，我们不采用那个。其他的课跟我们的课是完全冲突的，我们就相当于是对整个教育行业，中国的教育行业发起了一次总攻。&lt;/p&gt;
+&lt;p&gt;所以我们的目标呢不是让你去背符号，也不是让你去背定义，对于文科的学生来说呢这也是一个福音，而是让你掌握一种真正的我们叫做计算的思维，一种能够&lt;strong&gt;清晰的严谨的分析问题，设计方案，证明正确的思维方式&lt;/strong&gt;。这种思维方式无论未来技术如何去更迭，无论未来你处在什么样的岗位上，我相信你都是你人生当中最宝贵的财富。&lt;/p&gt;
+&lt;p&gt;好了，说了这么多，相信大家已经对这门课有一个初步的认识，那么我们开始构建这座计算机科学大厦的第一块基石，就是逻辑。我们下节课再见。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【数学】高等数学</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b007/</link>
+        <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b007/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b007/yj2.png" alt="Featured image of post 【数学】高等数学" /&gt;&lt;h2 id=&#34;高等数学&#34;&gt;高等数学
+&lt;/h2&gt;&lt;h3 id=&#34;极限与连续&#34;&gt;极限与连续
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs1.jpg&#34;
+	width=&#34;2452&#34;
+	height=&#34;3538&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs1_hu_6c04fd84391116dc.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs1_hu_fbf3b15524c6d0eb.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;极限与连续&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;69&#34;
+		data-flex-basis=&#34;166px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;导数与微分&#34;&gt;导数与微分
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs2.jpg&#34;
+	width=&#34;2112&#34;
+	height=&#34;2980&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs2_hu_8d70d6721130ce8c.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs2_hu_a4abf6f66c0c9707.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;导数与微分&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;70&#34;
+		data-flex-basis=&#34;170px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;微分中值定理&#34;&gt;微分中值定理
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs3.jpg&#34;
+	width=&#34;2228&#34;
+	height=&#34;3400&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs3_hu_5e9f435e63d1f54d.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs3_hu_248a72cd0706bad4.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;微分中值定理&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;65&#34;
+		data-flex-basis=&#34;157px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;导数几何应用&#34;&gt;导数几何应用
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs4.jpg&#34;
+	width=&#34;2088&#34;
+	height=&#34;4764&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs4_hu_d3cf91293caae066.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs4_hu_c9a873692c7616f7.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;导数几何应用&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;43&#34;
+		data-flex-basis=&#34;105px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;公式表&#34;&gt;公式表
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs5.jpg&#34;
+	width=&#34;1483&#34;
+	height=&#34;4096&#34;
+	srcset=&#34;https://airmuamua.github.io/hugoweb/p/b007/gs5_hu_df7cd6db39fc8f47.jpg 480w, https://airmuamua.github.io/hugoweb/p/b007/gs5_hu_98e7b4e131c057d3.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;公式表&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;36&#34;
+		data-flex-basis=&#34;86px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;以上均来自B站&lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/1035929235&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一高数&lt;/a&gt;的&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1CC4y1T72s/?spm_id_from=333.1387.search.video_card.click&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【&lt;em&gt;高等数学&lt;/em&gt;(上)】期末3小时通关！考点公式全面梳理+考试锦囊（上集）&lt;/a&gt;有兴趣的可以自己去看。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

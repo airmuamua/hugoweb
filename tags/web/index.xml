@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Web on Skye</title>
+        <link>https://airmuamua.github.io/hugoweb/tags/web/</link>
+        <description>Recent content in Web on Skye</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>空气炸锅中-Skye</copyright>
+        <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://airmuamua.github.io/hugoweb/tags/web/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Web】Web开发-B/S架构</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b023/</link>
+        <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b023/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%8F%E5%A4%A9%E6%A3%AE%E6%9E%97-%E5%A4%A7%E6%A0%91%E4%BB%B0%E6%8B%8D.png" alt="Featured image of post 【Web】Web开发-B/S架构" /&gt;&lt;h1 id=&#34;web开发通识课-bs架构软件&#34;&gt;Web开发通识课-B/S架构软件
+&lt;/h1&gt;&lt;h2 id=&#34;简言&#34;&gt;简言
+&lt;/h2&gt;&lt;p&gt;现在我们来讲BS架构的预备课，这预备课的主要内容是告诉大家软件的世界不仅仅还CS架构还有BS架构。&lt;/p&gt;
+&lt;p&gt;我们所说的开发Web项目，开发Web应用指的是什么——其实就是BS架构的软件&lt;/p&gt;
+&lt;p&gt;那么BS架构软件究竟意味着什么，哎，我们这个课要讲一下BS架构软件发展的历程，现在的状况以及未来的展望。这都是我们要考虑的问题。&lt;/p&gt;
+&lt;p&gt;我们这个课程不求就是说让你去追踪一语言，或者说追踪一个学习路径，没有这样的东西。学完这门课程你会发现这样东西都弱爆了。&lt;/p&gt;
+&lt;p&gt;你看完这门课你基本上，我不敢说能什么怎么怎么样哈，但是至少比你在市面上看到那些书，不管是看到博客还是其他也好，几乎是没有人能提及的这些东西。&lt;/p&gt;
+&lt;p&gt;我们这个课程主要说B/S架构是怎么开发，C/S架构不是我们的重点，因为C/S架构现在职位不是很多，基本上很少有人做C/S架构的软件。&lt;/p&gt;
+&lt;p&gt;而且我们现在都知道，就是我们会考虑到跨平台的问题，我们会给大家强调。就是说很多很多的应用程序都可以做跨平台应用，我们做B/S架构的时候其实实际上也是相当于把C/S架构做完了。我们之后会给大家再提到这个问题。&lt;/p&gt;
+&lt;p&gt;那么这里再给大家去复习一下，我们之前学的内容。比如说C/S架构的软件&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【Web】Web开发-C/S架构</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b024/</link>
+        <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b024/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%A4%8F%E5%A4%A9%E6%A3%AE%E6%9E%97-%E5%A4%A7%E6%A0%91%E4%BB%B0%E6%8B%8D.png" alt="Featured image of post 【Web】Web开发-C/S架构" /&gt;&lt;h1 id=&#34;web开发通识课-cs架构软件&#34;&gt;Web开发通识课-C/S架构软件
+&lt;/h1&gt;&lt;h2 id=&#34;cs-架构软件&#34;&gt;C/S 架构软件
+&lt;/h2&gt;&lt;p&gt;C/S 架构软件是什么意思？&lt;/p&gt;
+&lt;p&gt;client 客户端 需要下载 安装（QQ、微信、英雄联盟）&lt;/p&gt;
+&lt;p&gt;server 服务端（QQ账号、iD账号、身份证、密码）&lt;/p&gt;
+&lt;p&gt;C呢就相当于是客户端，S呢就相当于是服务端。&lt;/p&gt;
+&lt;p&gt;这什么意思呢？什么叫客户端和服务端呢？&lt;/p&gt;
+&lt;p&gt;很简单，你只需要打开**《英雄联盟》**，就明白我这个意思了。打开一个游戏就没白的的意思了，或者说打开微信就明白了，这叫C/S架构软件。&lt;/p&gt;
+&lt;p&gt;你比如说你在电脑上登录微信，它就属于叫C/S 架构软件，啥意思呢？&lt;/p&gt;
+&lt;p&gt;就是用户必须要下载这个软件，去安装。你们都从网上下载过软件嘛，下载——安装——下一步——下一步——下一步——安装成功，是吧，开始使用对吧。&lt;/p&gt;
+&lt;p&gt;需要下载，要安装才能使用，这是客户端。最简单就是QQ、微信或者说是英雄联盟这种，这都是客户端。&lt;/p&gt;
+&lt;p&gt;因为是客户嘛，客户要下载的东西，所以叫客户端。&lt;/p&gt;
+&lt;p&gt;那服务端呢就是人家公司要有的东西，公司要有一个超级大电脑，这个电脑叫做服务器。这个服务器就是要管理服务端的，就相当于什么呢？它的服务端存放的东西就是QQ账号、iD账号、身份证以及你的密码这些东西。它要放到服务端上，就是你基本上不能看到的东西。&lt;/p&gt;
+&lt;p&gt;相当于是客户与公司，与这些产品。比如说客户与QQ交互的这么样一个地方，就是服务端。&lt;/p&gt;
+&lt;p&gt;比如说我在登录QQ的时候我要输入账号输入密码，我一点登录他有网，他就把账号密码发到腾讯那，腾讯检查，OK，是本人，让你登录，返回来。怎么样？从服务端返回来告诉你：哦，你可以登录。告诉客户端：行，你可以登录。就这么一个过程。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>工具 on Skye</title>
+        <link>https://airmuamua.github.io/hugoweb/tags/%E5%B7%A5%E5%85%B7/</link>
+        <description>Recent content in 工具 on Skye</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>空气炸锅中-Skye</copyright>
+        <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://airmuamua.github.io/hugoweb/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【教程】VS环境搭建</title>
+        <link>https://airmuamua.github.io/hugoweb/p/b004/</link>
+        <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://airmuamua.github.io/hugoweb/p/b004/</guid>
+        <description>&lt;img src="https://airmuamua.github.io/hugoweb/p/b004/c.png" alt="Featured image of post 【教程】VS环境搭建" /&gt;&lt;h2 id=&#34;环境准备&#34;&gt;环境准备
+&lt;/h2&gt;&lt;h3 id=&#34;visual-studio下载&#34;&gt;Visual Studio下载
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前往【&lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/zh-hans/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Visual Studio官网&lt;/a&gt;】，下载Community版安装程序&lt;/li&gt;
+&lt;li&gt;一直点下一步，默认安装即可(更改文件位置咨询我)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
